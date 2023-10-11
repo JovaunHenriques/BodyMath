@@ -8,93 +8,93 @@ BodyMath is a web application designed to streamline the often cumbersome task o
 ## Key Features
 1. Calorie Calculator: Easily calculate your daily calorie needs based on your goals, whether it's bulking, cutting, or maintaining your current weight.
 <details><br>
-1.User Registration and Authentication:
+1. User Registration and Authentication:
 
-2.Allow users to create accounts and log in securely.
+2. Allow users to create accounts and log in securely.
 Implement password reset and email verification.
 Dashboard:
 
-3.Provide a personalized dashboard for users to track their progress, upcoming classes, and schedule.
+3. Provide a personalized dashboard for users to track their progress, upcoming classes, and schedule.
 Membership Management:
 
-4.Allow users to purchase and manage their memberships online.
+4. Allow users to purchase and manage their memberships online.
 Include options for monthly, yearly, and one-time passes.
 Class Scheduling and Booking:
 
-5.Display a calendar of classes and sessions.
+5. Display a calendar of classes and sessions.
 Enable users to book classes, reserve spots, and receive confirmation emails.
 Trainer Profiles:
 
-6.Create profiles for gym trainers with photos, bios, and schedules.
+6. Create profiles for gym trainers with photos, bios, and schedules.
 Enable users to book personal training sessions.
 Payment Integration:
 
-7.Implement secure payment processing for memberships and services.
+7. Implement secure payment processing for memberships and services.
 Support various payment methods like credit cards and digital wallets.
 Fitness Tracking:
 
-8.Offer tools for users to log and track their workouts and progress.
+8. Offer tools for users to log and track their workouts and progress.
 Generate graphs and charts to visualize fitness data.
 Nutrition and Diet Planning:
 
-9.Provide nutrition tips, meal plans, and calorie calculators.
+9. Provide nutrition tips, meal plans, and calorie calculators.
 Allow users to track their dietary intake and set goals.
 Blog and Content Management:
 
-10.Publish informative articles, workout routines, and fitness tips.
+10. Publish informative articles, workout routines, and fitness tips.
 Allow for user-generated content, like comments and reviews.
 Online Store:
 
-11.Sell gym merchandise, supplements, and fitness equipment.
+11. Sell gym merchandise, supplements, and fitness equipment.
 Include product catalogs, shopping carts, and secure checkout.
 Notification System:
 
-12.Send automated reminders for booked classes and upcoming events.
+12. Send automated reminders for booked classes and upcoming events.
 Notify users of schedule changes or promotions via email or SMS.
 Social Integration:
 
-13.Allow users to share their achievements and workouts on social media.
+13. Allow users to share their achievements and workouts on social media.
 Embed social media feeds on the website.
 Responsive Design:
 
-14.Ensure your website is mobile-friendly and works well on various devices.
+14. Ensure your website is mobile-friendly and works well on various devices.
 Search and Filtering:
 
-15.Implement search and filter options for classes, trainers, and content.
+15. Implement search and filter options for classes, trainers, and content.
 Feedback and Ratings:
 
-16.Let users provide feedback and ratings for classes and trainers.
+16. Let users provide feedback and ratings for classes and trainers.
 Display ratings and reviews on relevant pages.
 Contact and Support:
 
-17.Provide contact information and a support system for inquiries and issues.
+17. Provide contact information and a support system for inquiries and issues.
 Analytics and Reporting:
 
-18.Integrate analytics tools to track user behavior and website performance.
+18. Integrate analytics tools to track user behavior and website performance.
 Admin Panel:
 
-19.Build an admin panel for gym staff to manage memberships, classes, and content.
+19. Build an admin panel for gym staff to manage memberships, classes, and content.
 Security and Privacy:
 
-20.Ensure data security and comply with privacy regulations.
+20. Ensure data security and comply with privacy regulations.
 Membership Renewal and Reminders:
 
-21.Send automated renewal reminders to members before their memberships expire.
+21. Send automated renewal reminders to members before their memberships expire.
 Feedback Surveys:
 
-22.Collect user feedback through surveys to improve services.
+22. Collect user feedback through surveys to improve services.
 Event Calendar:
 
-23.Display special events, workshops, and promotions on a calendar.
+23. Display special events, workshops, and promotions on a calendar.
 Multi-language Support:
 
-24.If applicable, provide translations for a broader audience.
+24. If applicable, provide translations for a broader audience.
 Integration with IoT Devices:
 
-25.Connect with fitness trackers and smart devices for enhanced fitness tracking.
+25. Connect with fitness trackers and smart devices for enhanced fitness tracking.
 Live Streaming and Virtual Classes:
 
-26.Offer live streaming of classes for remote participants.
+26. Offer live streaming of classes for remote participants.
 </details><br>
 2. Macro Estimator: Determine your optimal macronutrient ratios (protein, carbohydrates, and fats) to support your fitness objectives.
 
@@ -106,7 +106,7 @@ BodyMath is built using a combination of web technologies, including HTML, CSS, 
 
 ## Getting Started
 
-BodyMath is accessible directly from your web browser, making it convenient for users of all skill levels. No complicated installations or downloads required.
+BodyMath is accessible directly from your web browser, making it convenient for users of all skill levels. No complicated installations or downloads are required.
 
 ## Contribution Welcomed 
 
@@ -125,6 +125,10 @@ Check out our project's README for screenshots and a live demo of BodyMath in ac
 We have exciting plans for the future, including the integration of React and SQL to enhance functionality and data management. Stay tuned for updates on upcoming features and improvements!
 
 ## Contact Us
-Have questions, suggestions, or encountered issues with BodyMath? Don't hesitate to reach out via email at jovaun@hotmail.com. We value your feedback and are committed to making BodyMath the ultimate fitness companion.
+Have questions, suggestions, or encounter issues with BodyMath? Don't hesitate to reach out via email at jovaun@hotmail.com. We value your feedback and are committed to making BodyMath the ultimate fitness companion.
 
 Start your fitness journey with BodyMath today, and let us help you achieve your goals more efficiently than ever before!
+
+## sketch
+![thumbnail_IMG_3496](https://github.com/JovaunHenriques/BodyMath/assets/125087426/b7efd228-2d0f-4c01-b30d-aae7e4d560fc)
+
