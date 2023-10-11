@@ -1,0 +1,45 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+h1{
+    padding: 0;
+
+}
+#bodyfigure {
+    padding: 0;
+    grid-row: 1/ span 2;
+
+}
+nav {
+    background-color: #0e6c94;
+    overflow: hidden;
+}
+/* Style your navigation bar as needed */
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: #0f0e0e;
+    font-weight: bold;
+}
+
+/* Add a separator line to the right of each list item */
+.navbar li:not(:last-child) a::after {
+    content: "|";
+    margin: 0 5px;
+    color: #1addf7;
+}
