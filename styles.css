@@ -8,6 +8,15 @@ h1{
     padding: 0;
 
 }
+/* CSS for the footer */
+footer {
+    background-color: #333; /* Set your preferred background color */
+    color: #fff; /* Set your preferred text color */
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
 #bodyfigure {
     padding: 0;
     grid-row: 1/ span 2;
