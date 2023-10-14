@@ -3,28 +3,30 @@ body{
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: #0e6c94;
+
 }
 h1{
     padding: 0;
 
 }
 /* CSS for the footer */
-footer {
+.main-footer {
     background-color: #333; /* Set your preferred background color */
     color: #fff; /* Set your preferred text color */
     text-align: center;
     padding: 10px;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em; 
 }
 
-#bodyfigure {
-    padding: 0;
-    grid-row: 1/ span 2;
-
+.h1-container{
+  justify-content: flex-end;
 }
-
 nav {
-    background-color: #0e6c94;
+    background-color: #10aef2;
     overflow: hidden;
     flex-wrap:wrap;
 }
@@ -46,6 +48,7 @@ nav {
     padding: 10px 10px;
     color: #0f0e0e;
     font-weight: bold;
+    flex: auto;
 }
 
 /* Add a separator line to the right of each list item */
@@ -54,59 +57,3 @@ nav {
     margin: 0 5px;
     color: #1addf7;
 }
-.main-header {
-    grid-area: header;
-  }
-  .content {
-    grid-area: content;
-  }
-  .main-nav {
-    grid-area: nav;
-  }
-  .side {
-    grid-area: sidebar;
-  }
-  .ad {
-    grid-area: ad;
-  }
-  .main-footer {
-    grid-area: footer;
-  }
-  .wrapper {
-    display: grid;
-    gap: 20px;
-    grid-template-areas:
-      "header"
-      "nav"
-      "content"
-      "sidebar"
-      "ad"
-      "footer";
-  }
-  @media (min-width: 500px) {
-    .wrapper {
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "sidebar content"
-        "ad      footer";
-    }
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-    }
-  }
-  @media (min-width: 700px) {
-    .wrapper {
-      grid-template-columns: 1fr 4fr 1fr;
-      grid-template-areas:
-        "header header  header"
-        "nav    content sidebar"
-        "nav    content ad"
-        "footer footer  footer";
-    }
-    nav ul {
-      flex-direction: column;
-    }
-  }
