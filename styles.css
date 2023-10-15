@@ -1,8 +1,8 @@
+
 body{
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: auto;
     padding: 0;
-    display: flex;
     background-color: #0e6c94;
 
 }
@@ -17,13 +17,11 @@ h1{
     text-align: center;
     padding: 10px;
     font-size: 14px;
-    display: flex;
-    flex-direction: column;
     gap: 0.5em; 
 }
-
 .h1-container{
-  justify-content: flex-end;
+    display: flex;
+  justify-content: center;
 }
 nav {
     background-color: #10aef2;
@@ -38,7 +36,7 @@ nav {
     display: flex;
 }
 
-.navbar li {
+.navbar div {
     margin: 0;
     padding: 0;
 }
@@ -52,8 +50,8 @@ nav {
 }
 
 /* Add a separator line to the right of each list item */
-.navbar li:not(:last-child) a::after {
+.navbar div:not(:last-child) a::after {
     content: "|";
     margin: 0 5px;
-    color: #1addf7;
+    color: #011517;
 }
