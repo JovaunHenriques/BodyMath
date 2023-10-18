@@ -3,9 +3,8 @@ const home = document.getElementById("home");
 const about = document.getElementById("about");
 let contact = document.getElementById("contact");
 let services = document.getElementById("services");
-let = document.getElementById("");
-let = document.getElementById("");
 
+//this is to control the body functionality 
 const muscles = document.getElementById('muscles');
 const highlight = document.getElementById('highlight');
 const resources = document.getElementById('resources');
