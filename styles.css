@@ -113,3 +113,12 @@ nav {
     text-decoration: none;
     color: #007bff;
 }
+/*info pop-up*/
+.info-button {
+    padding: 1rem;
+    z-index: 1;
+    background-color: grey;
+    color: white;
+    border: 0;
+    border-radius: 0.25rem;
+  }
