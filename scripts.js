@@ -4,6 +4,8 @@ const about = document.getElementById("about");
 let contact = document.getElementById("contact");
 let services = document.getElementById("services");
 
+info-button.addEventListener('click', about);
+
 //this is to control the body functionality 
 const muscles = document.getElementById('muscles');
 const highlight = document.getElementById('highlight');
