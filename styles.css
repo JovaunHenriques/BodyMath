@@ -36,7 +36,7 @@ nav li {
 @media (max-width: 768px) {
     nav {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     nav li {
@@ -44,21 +44,30 @@ nav li {
     }
 }
 .section {
+    position: relative;
     padding: 20px;
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 20px;
 }
-
-/* Create a responsive layout using CSS Grid */
-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr; /* Sidebar and main content */
-    grid-template-rows: auto;
-    grid-template-areas: "nav main";
+#section1{
+    position: relative;
+    display:flex;
+    justify-content:flex-start;
+}
+#section2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#section3{
+    position: relative;
+    display: flex;
+    justify-content: end;
 }
 
+/* Create a responsive layout using CSS Grid */
 nav {
     grid-area: nav;
     background-color: #333;
@@ -68,11 +77,6 @@ nav {
     flex-direction: column;
     align-items: center;
 }
-
-.main {
-    grid-area: main;
-}
-
 /* Modern styling for the navigation links */
 nav ul {
     list-style-type: none;
