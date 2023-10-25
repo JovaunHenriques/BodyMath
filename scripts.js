@@ -14,3 +14,10 @@ document.querySelectorAll('a').forEach(anchor => {
         }
     });
 });
+
+// Toggle navigation menu for smaller screens
+const navbar = document.querySelector('.navbar');
+
+navbar.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+});
