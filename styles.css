@@ -9,15 +9,46 @@ nav {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
 }
+nav img {
+    width: 40px; /* Adjust the size as needed */
+    height: 30px;
+    margin-right: 10px; /* Adds some space between the logo and the navigation links */
+}
+div img {
+    width: 30%;
+    height: 30%;
+}
 
-nav li {
+@media (max-width: 768px) {
+    nav img {
+        display: none; /* Hide the logo on smaller screens */
+    }
+}
+.logo-container {
+    border-radius: 50%; /* Creates a round shape */
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    background-color: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the logo image */
+.logo-container img {
+    width: 60px; /* Adjust the size of the logo image */
+    height: 60px;
+    border-radius: 50%; /* Clip the image to match the container shape */
+}
+
+nav div {
     display: inline;
     margin: 0 20px;
 }
@@ -85,7 +116,7 @@ nav li {
         flex-direction: column;
     }
 
-    .navbar.active li {
+    .navbar.active div {
         margin: 10px;
     }
 
