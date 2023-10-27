@@ -42,7 +42,7 @@ closeModal.addEventListener("click", () => {
 window.addEventListener("click", (e) => {
     if (e.target === registrationModal) {
         registrationModal.style.display = "none";
-    });
+    }});
 
 // Handle registration form submission (similar to the previous example)
 registrationForm.addEventListener("submit", async (e) => {

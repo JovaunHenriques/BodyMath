@@ -5,6 +5,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* Navigation Bar Styles */
 nav {
     background-color: #333;
     color: white;
@@ -12,87 +13,52 @@ nav {
     padding: 5px;
 }
 
+nav li{
+    padding: 1px;
+    margin: 10px;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
 }
-/*Icon style*/
+
+/* Logo Icon Styles */
 nav img {
     width: 40px; /* Adjust the size as needed */
     height: 30px;
     margin-right: 10px; /* Adds some space between the logo and the navigation links */
 }
-/*img Banner-container style*/
-div img {
-    width: 30%;
-    height: 30%;
-}
 
-@media (max-width: 768px) {
-    nav img {
-        display: none; /* Hide the logo on smaller screens */
-    }
-}
-/*used for Icon Shape size etc.. */
-.logo-container {
-    border-radius: 50%; /* Creates a round shape */
-    width: 80px; /* Adjust the size as needed */
-    height: 80px;
-    background-color: #333; 
+/* Banner Container Styles */
+.banner {
+    position: relative;
+    background-image: url('_landscape_gym_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px; /* Adjust the height as needed */
+    width: 1050px;
+    margin: auto;
+    padding: auto;
+    color: #090909; /* Text color */
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Style for the logo image */
-.logo-container img {
-    width: 60px; /* Adjust the size of the logo image */
-    height: 60px;
-    border-radius: 50%; /* Clip the image to match the container shape */
+.banner h1 {
+    font-size: 2.5rem;
+    margin: 0;
 }
 
-nav div {
-    display: inline;
-    margin: 0 20px;
+.banner p {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar a:hover {
-    color: #ff6600;
-}
-
-/* Style the sections */
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-}
-
-.section {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin: 20px;
-    padding: 20px;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    nav {
-        display: flex;
-        flex-direction: column;
-    }
-}
-/* ... (previous CSS code) */
-
-/* Modern styling for sections */
+/* Section Styles */
 .section {
     padding: 20px;
     background-color: #f2f2f2;
@@ -103,15 +69,20 @@ nav div {
     transition: transform 0.3s;
 }
 
-/* Add hover effect to sections */
+/* Hover Effect for Sections */
 .section:hover {
     transform: scale(1.05);
 }
 
-/* Style the navigation menu for smaller screens */
+/* Modern Styling for Sections */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
+    nav img {
+        display: none; /* Hide the logo on smaller screens */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
     }
 
     .navbar.active ul {
@@ -127,6 +98,26 @@ nav div {
         font-size: 1.2rem;
     }
 }
+
+/* Logo Container Styles */
+.logo-container {
+    border-radius: 50%; /* Creates a round shape */
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo Image Styles */
+.logo-container img {
+    width: 60px; /* Adjust the size of the logo image */
+    height: 60px;
+    border-radius: 50%; /* Clip the image to match the container shape */
+}
+
+/* Registration Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -142,7 +133,7 @@ nav div {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: #aaded0;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
