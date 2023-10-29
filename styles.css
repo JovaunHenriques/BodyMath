@@ -29,7 +29,7 @@ nav img {
 
 /* Add margin and padding to navigation items */
 nav li {
-    margin: 0 10px; /* Adjust the spacing between navigation items */
+    margin: 0 20px; /* Adjust the spacing between navigation items */
     padding: 5px; /* Adjust padding for a more comfortable touch area */
 }
 
@@ -114,10 +114,6 @@ nav li {
     /* CSS styles for tablets here */
 }
 
-/* Media query for mobile phones */
-@media (max-width: 480px) {
-    /* CSS styles for mobile phones here */
-}
 /* Media query for tablets */
 @media (max-width: 768px) {
     nav img {
