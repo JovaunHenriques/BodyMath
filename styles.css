@@ -10,17 +10,14 @@ nav {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 10px 0; /* Add padding to the top and bottom to make the navigation bar taller */
 }
 
-nav li{
-    padding: 1px;
-    margin: 10px;
-}
 nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
+    justify-content: space-between; /* Distribute items evenly across the navigation bar */
 }
 
 /* Logo Icon Styles */
@@ -29,6 +26,13 @@ nav img {
     height: 30px;
     margin-right: 10px; /* Adds some space between the logo and the navigation links */
 }
+
+/* Add margin and padding to navigation items */
+nav li {
+    margin: 0 10px; /* Adjust the spacing between navigation items */
+    padding: 5px; /* Adjust padding for a more comfortable touch area */
+}
+
 #searchBar {
     padding: 5px;
     width: 200px; /* Adjust the width as needed */
@@ -46,11 +50,13 @@ nav img {
     cursor: pointer;
 }
 
-.profile{
+.profile {
     background-color: #aaded0;
     border-radius: 50%;
     position: relative;
 }
+
+
 
 /* Banner Container Styles */
 .banner {
@@ -58,8 +64,8 @@ nav img {
     background-image: url('_landscape_gym_banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 500px; /* Adjust the height as needed */
-    width: 1050px;
+    height: auto; /* Adjust the height as needed */
+    width: 100%;
     margin: auto;
     padding: auto;
     color: #090909; /* Text color */
@@ -88,6 +94,8 @@ nav img {
 
 /* Modern Styling for Sections */
 @media (max-width: 768px) {
+    /* Responsive styles for smaller screens */
+
     nav img {
         display: none; /* Hide the logo on smaller screens */
     }
@@ -95,6 +103,10 @@ nav img {
     nav {
         display: flex;
         flex-direction: column;
+    }
+
+    nav li {
+        margin: 5px; /* Adjust the spacing between navigation items for smaller screens */
     }
 
     .navbar.active ul {
@@ -138,37 +150,7 @@ nav img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #aaded0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-/* Modal style*/
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000; /* Ensure it's above other content*/ 
+    z-index: 1000; /* Ensure it's above other content */
 }
 
 .modal-content {
