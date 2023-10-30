@@ -6,18 +6,14 @@ body {
 }
 
 /* Navigation Bar Styles */
-nav {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0; /* Add padding to the top and bottom to make the navigation bar taller */
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: space-between; /* Distribute items evenly across the navigation bar */
+.nav-bar a {
+    position: relative;
+    font-size: 1.1rem;
+    color: rgb(28, 28, 59);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+    width: 0;
 }
 
 /* Logo Icon Styles */
@@ -27,18 +23,27 @@ nav img {
     margin-right: 10px; /* Adds some space between the logo and the navigation links */
 }
 
-/* Add margin and padding to navigation items */
-nav li {
-    margin: 0 50px; /* Adjust the spacing between navigation items */
-    padding: 5px; /* Adjust padding for a more comfortable touch area */
-}
-
 #searchBar {
     padding: 5px;
     width: 200px; /* Adjust the width as needed */
     border: none;
     border-radius: 5px;
     margin-right: 10px; /* Adds spacing between the search bar and the "Search" button */
+}
+.search-bar input {
+    width: 100%;
+    height: auto;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #e4e4e4;
+    color: rgb(28, 28, 59);
+    padding: 10px;
+}
+.search-bar button i {
+    font-size: 22px;
+    color: rgb(28, 28, 59);
 }
 
 #searchButton {
@@ -62,7 +67,7 @@ nav li {
 /* Banner Container Styles */
 .banner {
     position: relative;
-    background-image: url('landscapegymbanner.jpg');
+    background-image: url('landscapeGymBanner.jpg');
     background-size: cover;
     background-position: center;
     height: auto; /* Adjust the height as needed */
