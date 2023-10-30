@@ -29,7 +29,7 @@ nav img {
 
 /* Add margin and padding to navigation items */
 nav li {
-    margin: 0 20px; /* Adjust the spacing between navigation items */
+    margin: 0 50px; /* Adjust the spacing between navigation items */
     padding: 5px; /* Adjust padding for a more comfortable touch area */
 }
 
@@ -48,6 +48,7 @@ nav li {
     border-radius: 5px;
     padding: 5px 10px; /* Adjust padding as needed */
     cursor: pointer;
+    right: 100px;
 }
 
 .profile {
@@ -61,7 +62,7 @@ nav li {
 /* Banner Container Styles */
 .banner {
     position: relative;
-    background-image: url('_landscape_gym_banner.jpg');
+    background-image: url('landscapegymbanner.jpg');
     background-size: cover;
     background-position: center;
     height: auto; /* Adjust the height as needed */
