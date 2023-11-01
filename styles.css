@@ -7,7 +7,7 @@ body {
 
 /* Navigation Bar Styles */
 
-.nav-bar a {
+#nav-bar a {
     position: relative;
     font-size: 1.1rem;
     color: rgb(28, 28, 59);
@@ -33,6 +33,7 @@ nav img {
 .search-bar {
     width: 300px;
     height: 35px;
+    margin-right: 20px;
     background: transparent;
     border: 2px solid rgb(248, 248, 252);
     border-radius: 6px;
