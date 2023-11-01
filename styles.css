@@ -6,14 +6,21 @@ body {
 }
 
 /* Navigation Bar Styles */
+
 .nav-bar a {
     position: relative;
     font-size: 1.1rem;
     color: rgb(28, 28, 59);
     font-weight: 500;
     text-decoration: none;
-    margin-left: 40px;
+    padding: auto;
+    margin: auto;
+    margin-right: 40px;
     width: 0;
+}
+.navbar a:hover::before {
+    width: 100%;
+    opacity: 1;
 }
 
 /* Logo Icon Styles */
@@ -23,12 +30,14 @@ nav img {
     margin-right: 10px; /* Adds some space between the logo and the navigation links */
 }
 
-#searchBar {
-    padding: 5px;
-    width: 200px; /* Adjust the width as needed */
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px; /* Adds spacing between the search bar and the "Search" button */
+.search-bar {
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid rgb(248, 248, 252);
+    border-radius: 6px;
+    display: flex;
+    vertical-align: middle;
 }
 .search-bar input {
     width: 100%;
@@ -41,19 +50,62 @@ nav img {
     color: rgb(28, 28, 59);
     padding: 10px;
 }
+.search-bar input::placeholder {
+    color: rgb(28, 28, 59);
+    vertical-align: middle;
+}
+.search-bar button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 5px;
+}
 .search-bar button i {
     font-size: 22px;
     color: rgb(28, 28, 59);
+}.search-bar {
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border: 2px solid rgb(245, 245, 248);
+    border-radius: 6px;
+    display: flex;
+    vertical-align: middle;
 }
-
-#searchButton {
-    background-color: #333; /* Button background color */
-    color: white; /* Button text color */
+.search-bar input {
+    width: 100%;
+    height: auto;
+    background: transparent;
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px; /* Adjust padding as needed */
+    outline: none;
+    font-size: 1rem;
+    color: #e4e4e4;
+    color: rgb(28, 28, 59);
+    padding: 10px;
+}
+.search-bar input::placeholder {
+    color: rgb(222, 222, 233);
+    vertical-align: middle;
+}
+.search-bar button {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-    right: 100px;
+    padding: 5px;
+}
+.search-bar button i {
+    font-size: 22px;
+    color: rgb(28, 28, 59);
 }
 
 .profile {
