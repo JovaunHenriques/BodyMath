@@ -122,6 +122,9 @@ nav img {
 
 /* Apply common styling to both forms */
 .form {
+    position: absolute;
+    right: 20px;
+    top: 175px;
     text-align: left;
     padding: 20px;
     background-color: #f1f1f1;
