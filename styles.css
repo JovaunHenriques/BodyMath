@@ -13,9 +13,9 @@ body {
     color: rgb(28, 28, 59);
     font-weight: 500;
     text-decoration: none;
-    padding: auto;
+    padding: 50px;
     margin: auto;
-    margin-right: 40px;
+    margin-right: 30px;
     width: 0;
 }
 .navbar a:hover::before {
@@ -107,6 +107,77 @@ nav img {
 .search-bar button i {
     font-size: 22px;
     color: rgb(28, 28, 59);
+}
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Hide the "Sign Up" form initially */
+.form--hidden {
+    display: none;
+}
+
+/* Apply common styling to both forms */
+.form {
+    text-align: left;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form__message {
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Style the "Sign Up" button */
+#toggleForm {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Apply specific styles to the "Log In" form */
+#login {
+    background-color: #f9f9f9;
 }
 
 .profile {
@@ -224,6 +295,28 @@ nav img {
     width: 60px; /* Adjust the size of the logo image */
     height: 60px;
     border-radius: 50%; /* Clip the image to match the container shape */
+}
+footer {
+    background-color: #333; /* Change this to your preferred background color */
+    color: #fff; /* Change this to your preferred text color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px; /* Adjust the max width as needed */
+    margin: 0 auto;
+}
+
+.social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff; /* Change this to your preferred social icon color */
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ff9900; /* Change this to your preferred color on hover */
 }
 
 /* Registration Modal Styles */

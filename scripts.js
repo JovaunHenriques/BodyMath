@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     // Add smooth scrolling to navigation links
     document.querySelectorAll('a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href').substring(1);
@@ -23,38 +23,32 @@ document.addEventListener("DOMContentLoaded", function() {
         navbar.classList.toggle('active');
     });
 
-    //<--Registration js-->
-    const signupButton = document.getElementById("signupButton");
-    const registrationModal = document.getElementById("registrationModal");
+    // Toggle Log In and Sign Up forms
+    const showLoginFormButton = document.getElementById("showLogin");
+    const showCreateAccountFormButton = document.getElementById("showCreateAccount");
+    const loginForm = document.getElementById("loginForm");
+    const createAccountForm = document.getElementById("createAccountForm");
+
+    showLoginFormButton.addEventListener("click", () => {
+        loginForm.classList.remove("form--hidden");
+        createAccountForm.classList.add("form--hidden");
+    });
+
+    showCreateAccountFormButton.addEventListener("click", () => {
+        loginForm.classList.add("form--hidden");
+        createAccountForm.classList.remove("form--hidden");
+    });
+
+    // Toggle combined form modal
+    const toggleFormButton = document.getElementById("toggleForm");
+    const combinedFormModal = document.getElementById("combinedFormModal");
     const closeModal = document.getElementById("closeModal");
-    const registrationForm = document.getElementById("registrationForm");
-    const message = document.getElementById("message");
 
-    // Open the registration modal when the "Sign Up" button is clicked
-    signupButton.addEventListener("click", () => {
-        registrationModal.style.display = "block";
+    toggleFormButton.addEventListener("click", function () {
+        combinedFormModal.style.display = "block";
     });
 
-    // Close the registration modal when the "X" button is clicked
-    closeModal.addEventListener("click", () => {
-        registrationModal.style.display = "none";
-    });
-
-    // Close the registration modal when the user clicks outside of it
-    window.addEventListener("click", (e) => {
-        if (e.target === registrationModal) 
-            registrationModal.style.display = "none";
-    });
-
-    // Handle registration form submission (similar to the previous example)
-    registrationForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-
-        // ...
-        // (Client-side validation and registration logic as before)
-        // ...
-
-        // Simulate a successful registration
-        message.innerHTML = "Registration successful!";
+    closeModal.addEventListener("click", function () {
+        combinedFormModal.style.display = "none";
     });
 });
