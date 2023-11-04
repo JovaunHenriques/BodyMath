@@ -13,9 +13,9 @@ body {
     color: rgb(28, 28, 59);
     font-weight: 500;
     text-decoration: none;
-    padding: 20px;
+    padding: 10px;
     margin: auto;
-    margin-right: 30px;
+    margin-right: 20px;
     width: 0;
 }
 .navbar a:hover::before {
@@ -194,8 +194,6 @@ nav img {
 /* Banner Container Styles */
 .banner {
     position: relative;
-    background-image: url('landscapeGymBanner.jpg');
-    background-size: cover;
     background-position: center;
     height: auto; /* Adjust the height as needed */
     width: 100%;
@@ -211,7 +209,8 @@ nav img {
 
 /* Section Styles */
 .section {
-    padding: 15px;
+    width: 1000px;
+    padding: 10px;
     background-color: #f2f2f2;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -238,7 +237,7 @@ nav img {
         flex-direction: column;
     }
 
-    nav li {
+    nav a {
         margin: 5px; /* Adjust the spacing between navigation items for smaller screens */
     }
    
@@ -304,6 +303,8 @@ footer {
     color: #fff; /* Change this to your preferred text color */
     padding: 20px 0;
     text-align: center;
+    flex: auto;
+    position: relative;
 }
 
 .footer-container {
