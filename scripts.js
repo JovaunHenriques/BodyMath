@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        const homePage = document.getElementById("homePage");
+    
+        // Add a click event listener to the link
+        navLink.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+    
+            // Set the location to the URL of the new page
+            window.location.href = "index.html"; // Change "new_page.html" to the actual URL
+        });
+    });
+    
 
     // Toggle navigation menu for smaller screens
     const navbar = document.querySelector('.navbar');
