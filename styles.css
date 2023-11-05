@@ -18,13 +18,13 @@ body {
     margin-right: 20px;
     width: 0;
 }
-.navbar a:hover::before {
+.navbar div:hover::before {
     width: 100%;
     opacity: 1;
 }
 
 /* Logo Icon Styles */
-nav img {
+.nav-img {
     width: 40px; /* Adjust the size as needed */
     height: 30px;
     margin-right: 10px; /* Adds some space between the logo and the navigation links */
@@ -298,20 +298,21 @@ nav img {
     height: 60px;
     border-radius: 20%; /* Clip the image to match the container shape */
 }
+/* Footer Styles */
 footer {
     background-color: #333; /* Change this to your preferred background color */
     color: #fff; /* Change this to your preferred text color */
     padding: 20px 0;
     text-align: center;
-    flex: auto;
-    position: relative;
 }
 
+/* Centering footer contents */
 .footer-container {
     max-width: 1200px; /* Adjust the max width as needed */
     margin: 0 auto;
 }
 
+/* Social Links Styles */
 .social-links a {
     font-size: 24px;
     margin: 0 10px;
@@ -322,6 +323,7 @@ footer {
 .social-links a:hover {
     color: #ff9900; /* Change this to your preferred color on hover */
 }
+
 
 /* Registration Modal Styles */
 .modal {

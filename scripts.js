@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault(); // Prevent the default link behavior
     
             // Set the location to the URL of the new page
-            window.location.href = "index.html"; // Change "new_page.html" to the actual URL
+            window.location.href = "index.html"; 
         });
     });
     
