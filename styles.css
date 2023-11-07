@@ -290,12 +290,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 /* Logo Image Styles */
 .logo-container img {
     width: 60px; /* Adjust the size of the logo image */
     height: 60px;
+    position: relative;
+    right: 40px;
+    bottom: 15px;
     border-radius: 20%; /* Clip the image to match the container shape */
 }
 /* Footer Styles */
