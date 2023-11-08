@@ -14,7 +14,9 @@ body {
     font-weight: 500;
     text-decoration: none;
     padding: 10px;
-    margin: auto;
+    margin:auto;
+    margin-top: auto;
+    margin-bottom: auto;
     margin-right: 20px;
     width: 0;
 }

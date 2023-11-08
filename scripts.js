@@ -15,18 +15,19 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-    document.addEventListener("DOMContentLoaded", function() {
-        const homePage = document.getElementById("homePage");
-    
-        // Add a click event listener to the link
-        navLink.addEventListener("click", function(event) {
-            event.preventDefault(); // Prevent the default link behavior
-    
-            // Set the location to the URL of the new page
-            window.location.href = "index.html"; 
-        });
+
+    // Corrected event listeners for navigation links
+    document.getElementById("homePage").addEventListener("click", function () {
+        window.location.href = "./index.html";
     });
-    
+
+    document.getElementById("aboutPage").addEventListener("click", function () {
+        window.location.href = "./about page.html";
+    });
+
+    document.getElementById("contactPage").addEventListener("click", function () {
+        window.location.href = "./contactpage.html";
+    });
 
     // Toggle navigation menu for smaller screens
     const navbar = document.querySelector('.navbar');
