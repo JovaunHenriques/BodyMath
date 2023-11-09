@@ -17,16 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Corrected event listeners for navigation links
+    const navigateTo = (page) => {
+        window.location.href = `./${page}.html`;
+    };
+
     document.getElementById("homePage").addEventListener("click", function () {
-        window.location.href = "./index.html";
+        navigateTo("index");
     });
 
     document.getElementById("aboutPage").addEventListener("click", function () {
-        window.location.href = "./about page.html";
+        navigateTo("about page");
     });
 
     document.getElementById("contactPage").addEventListener("click", function () {
-        window.location.href = "./contactpage.html";
+        navigateTo("contactpage");
     });
 
     // Toggle navigation menu for smaller screens
@@ -52,16 +56,26 @@ document.addEventListener("DOMContentLoaded", function () {
         createAccountForm.classList.remove("form--hidden");
     });
 
-    // Toggle combined form modal
-    const toggleFormButton = document.getElementById("toggleForm");
-    const combinedFormModal = document.getElementById("combinedFormModal");
-    const closeModal = document.getElementById("closeModal");
+   // Toggle combined form modal
+   const toggleFormButton = document.getElementById("toggleForm");
+   const combinedFormModal = document.getElementById("combinedFormModal");
 
-    toggleFormButton.addEventListener("click", function () {
-        combinedFormModal.style.display = "block";
-    });
+   toggleFormButton.addEventListener("click", function () {
+       if (combinedFormModal.style.display === "none" || combinedFormModal.style.display === "") {
+           combinedFormModal.style.display = "block";
+       } else {
+           combinedFormModal.style.display = "none";
+       }
+   });
 
-    closeModal.addEventListener("click", function () {
-        combinedFormModal.style.display = "none";
+    // Handle click on login/sign-up button
+    const loginSignupButton = document.getElementById("toggleForm");
+
+    loginSignupButton.addEventListener("click", function (e) {
+        e.preventDefault();
+        // Add your logic for handling the click event here
+        console.log("Login/Sign-up button clicked!");
+        const registrationForm = document.getElementById("registration");
+        registrationForm.classList.toggle("form--hidden");
     });
 });

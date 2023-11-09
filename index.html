@@ -22,7 +22,7 @@
             <a id="homePage" href="./index.html">Home</a>
             <a id="aboutPage" href="./about page.html">About</a>
             <a id="contactPage" href="./contactpage.html">Contact</a>
-            <a><i class="fa-solid fa-address-card"></i></a>
+            <a href="#" class="form__link" id="toggleForm"><i class="fa-solid fa-address-card"></i></a>
             <divs class="search-Bar">
                 <form id="search-bar" action="#" class="search-bar">
                  <input type="text" placeholder="Search...">
@@ -30,7 +30,8 @@
                  </div>
              </form>
             </nav>
-                <form class="form" id="registration">
+            <div class="form-container">
+                <form class="form form--hidden" id="registration">
                     <h2 class="form__title">Sign Up</h2>
                     <div class="form__message form__message--error"></div>
                     <div class="input-box">
@@ -59,7 +60,7 @@
                     </div>
                 </form>
             </div>
-            
+        </div>
         
  <!-- Registration Modal -->
     <div id="registrationModal" class="modal">
