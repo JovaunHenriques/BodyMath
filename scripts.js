@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.addEventListener('click', () => {
         navbar.classList.toggle('active');
     });
+    function open_login_popup(click){
+
+    }
 
     // Toggle Log In and Sign Up forms
     const showLoginFormButton = document.getElementById("showLogin");
