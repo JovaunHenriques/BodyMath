@@ -16,10 +16,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Corrected event listeners for navigation links
+    // Event listeners for navigation links
     const navigateTo = (page) => {
         window.location.href = `./${page}.html`;
     };
+
+    document.getElementById("linkedin-Link").addEventListener("click", function () {
+        navigateTo("https://www.linkedin.com/in/jovaun-henriques-37b61b195/");
+    });
 
     document.getElementById("homePage").addEventListener("click", function () {
         navigateTo("index");
@@ -56,17 +60,17 @@ document.addEventListener("DOMContentLoaded", function () {
         createAccountForm.classList.remove("form--hidden");
     });
 
-   // Toggle combined form modal
-   const toggleFormButton = document.getElementById("toggleForm");
-   const combinedFormModal = document.getElementById("combinedFormModal");
+    // Toggle combined form modal
+    const toggleFormButton = document.getElementById("toggleForm");
+    const combinedFormModal = document.getElementById("combinedFormModal");
 
-   toggleFormButton.addEventListener("click", function () {
-       if (combinedFormModal.style.display === "none" || combinedFormModal.style.display === "") {
-           combinedFormModal.style.display = "block";
-       } else {
-           combinedFormModal.style.display = "none";
-       }
-   });
+    toggleFormButton.addEventListener("click", function () {
+        if (combinedFormModal.style.display === "none" || combinedFormModal.style.display === "") {
+            combinedFormModal.style.display = "block";
+        } else {
+            combinedFormModal.style.display = "none";
+        }
+    });
 
     // Handle click on login/sign-up button
     const loginSignupButton = document.getElementById("toggleForm");
