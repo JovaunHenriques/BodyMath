@@ -31,6 +31,7 @@
              </form> 
              <!-- <button onclick="#"></button> -->
             </nav>
+            <div class="register-link">
             <div class="form-container">
                 <form class="form form--hidden" id="registration">
                     <h2 class="form__title">Sign Up</h2>
@@ -57,14 +58,15 @@
                     </div>
                     <button type="submit" class="btn" id="login-button">Sign Up</button>
                     <div class="register-link">
-                        <p>Already have an account? <a href="#registrationModal" class="form__link" onclick="form_2()" id="toggleForm">Log In</a></p>
+                        <p>Already have an account? <a href="#" class="form__link" onclick="toggleForms()" id="toggleForm">Log In</a></p>
                     </div>
                 </form>
             </div>
         </div>
+    </div>
         
  <!-- Registration Modal -->
-    <div id="registrationModal registrationModal--hidden" class="modal">
+ <div id="combinedFormModal" class="modal form--hidden">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <h2>User Registration</h2>
@@ -78,7 +80,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required><br>
 
-                <button type="submit">Register</button>
+                <button id="closeModal" onclick="closeModal()">Close</button>
             </form>
 
             <div id="message"></div>
