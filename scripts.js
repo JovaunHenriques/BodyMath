@@ -1,3 +1,15 @@
+function showLogin_popup(onclick) {
+    let form = document.getElementById("registration")
+    form.classList.remove("form--hidden")
+}
+
+function toggleForm(onclick){
+    let form_2 =document.getElementById("registrationModal")
+    if (window.getComputedStyle(form).display = 'block') {
+        form_2.classList.remove("registrationModal--hidden")
+    }
+
+}
 document.addEventListener("DOMContentLoaded", function () {
     // Add smooth scrolling to navigation links
     document.querySelectorAll('a').forEach(anchor => {
