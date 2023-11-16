@@ -5,9 +5,8 @@ function showLoginPopup() {
 
 function toggleForm() {
     let form_2 = document.getElementById("combinedFormModal");
-    if (window.getComputedStyle(form_2).display === 'block') {
-        form_2.classList.remove("form--hidden");
-    }
+    form_2.style.display = "block";
+    
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -49,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("contactPage").addEventListener("click", function () {
             navigateTo("contactpage");
+            
+            setupNavigationLinks();
         });
     }
 
@@ -90,5 +91,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     addSmoothScrolling();
-    setupNavigationLinks();
+    
 });
