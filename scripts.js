@@ -65,7 +65,9 @@ function hideLogin (){
 function toggleRegistration (){
     let flipRegistragtion = document.getElementById("registration");
      if (flipRegistragtion.classList.contains("form--hidden")){
-        
+        showRegistration();
+     }else {
+        hideRegistrastion();
      }
 }
 function toggleForms () {
