@@ -42,38 +42,56 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
+    // addSmoothScrolling();
+});
+// Handle click on show combined form button
+function showRegistration(){
+    let registrationform = document.getElementById("registration");
+    registrationform.classList.remove("form--hidden");
+}
+function hideRegistrastion(){
+    let registrationform = document.getElementById("registration");
+    registrationform.classList.add("form--hidden");
+}
+function showLogin (){
+    let loginform = document.getElementById("combinedFormModal");
+    loginform.classList.remove("form--hidden");
+}
+function hideLogin (){
+    let loginform = document.getElementById("combinedFormModal");
+    loginform.classList.add("form--hidden");
+}
+function toggleRegistration (){
+    let flipRegistragtion = document.getElementById("registration");
+     if (flipRegistragtion.classList.contains("form--hidden")){
+        
+     }
+}
+function toggleForms () {
+    const registrationForm = document.getElementById("combinedFormModal");
+    if (registrationForm.classList.contains("form--hidden")){
+        console.log("hiding registrationForm");
+        hideRegistrastion();
+        showLogin();
+        
+        }
+        else {
+            console.log("showing registrationForm");
+            showRegistration();
+            hideLogin();
+        }
     
-    const closeModal = () => {
-        const combinedFormModal = document.getElementById("combinedFormModal");
-        combinedFormModal.style.display = "none";
-    };
+};
 
-    const showCombinedForm = () => {
-        const combinedFormModal = document.getElementById("combinedFormModal");
-        combinedFormModal.style.display = "block";
-    };
-
-    // Handle click on Log In/Sign Up link
-    const toggleFormLink = document.getElementById("openLogin");
-    toggleFormLink.addEventListener("click", function (e) {
-        e.preventDefault();
-        const registrationForm = document.getElementById("registration");
-        registrationForm.classList.toggle("form--hidden");
-    });
-
-     // Handle click on show combined form button
-    // const toggleFormButton = document.getElementById("toggleForm");
-    // toggleFormButton.addEventListener("click", function () {
-    //     showCombinedForm();
-    // });
+// Handle click on Log In/Sign Up link
+ 
     // Handle click on close modal button
     const closeModalButton = document.getElementById("closeModal");
     closeModalButton.addEventListener("click", function () {
-        closeModal();
+        toggleForms();
     });
-    
-    // addSmoothScrolling();
-});
+
 // function setInputError(inputElement, message) {
 //     inputElement.classList.add("form__input--error");
 //     inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
@@ -83,11 +101,3 @@ document.addEventListener("DOMContentLoaded", function () {
 //     inputElement.classList.remove("form__input--error");
 //     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
 // }
-function toggleForms () {
-    const registrationForm = document.getElementById("registration");
-    const combinedFormModal = document.getElementById("combinedFormModal");
-
-    registrationForm.classList.toggle("form--hidden");
-    combinedFormModal.classList.toggle("form--hidden");
-    
-};

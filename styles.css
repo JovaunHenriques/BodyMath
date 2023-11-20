@@ -79,7 +79,7 @@ body {
 
 /* Hide the "Sign Up" form initially */
 .form--hidden {
-    display: none;
+    display: none !important;
 }
 
 /* Apply common styling to both forms */
@@ -295,8 +295,8 @@ footer {
 
 
 /* Registration Modal Styles */
-.modal {
-    display: none;
+.my-modal {
+    display: block;
     position: fixed;
     top: 0;
     left: 0;

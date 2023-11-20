@@ -22,7 +22,7 @@
             <a id="homePage" href="./index.html">Home</a>
             <a id="aboutPage" href="./about page.html">About</a>
             <a id="contactPage" href="./contactpage.html">Contact</a>
-            <a href="#registration" class="form__link" id="openLogin"><i class="fa-solid fa-address-card"></i></a>
+            <a href="#" class="form__link"  onclick="showRegistration()"><i class="fa-solid fa-address-card"></i></a>
             <divs class="search-Bar">
                  <form id="search-bar" action="#" class="search-bar">
                  <input type="text" placeholder="Search...">
@@ -65,18 +65,18 @@
     </div>
         
  <!-- Registration Modal -->
- <div id="combinedFormModal" class="modal form--hidden">
+ <div id="combinedFormModal" class="my-modal form--hidden">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <h2>Login</h2>
-            <form id="registrationForm">
+            <form id="loginForm">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username/E-mail" placeholder="username/E-mail" required><br>
 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="Password" required><br>
 
-                <button id="closeModal" onclick="closeModal()">Close</button>
+                <button id="closeModal" onclick="toggleForms()">Close</button>
             </form>
 
             <div id="message"></div>
