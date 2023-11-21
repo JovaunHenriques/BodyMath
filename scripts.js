@@ -94,12 +94,44 @@ function toggleForms () {
         toggleForms();
     });
 
-// function setInputError(inputElement, message) {
-//     inputElement.classList.add("form__input--error");
-//     inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
-// }
+    function validateForm() {
+        // Get form elements
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
 
-// function clearInputError(inputElement) {
-//     inputElement.classList.remove("form__input--error");
-//     inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
-// }
+        // Reset error messages
+        document.getElementById("usernameError").innerText = "";
+        document.getElementById("emailError").innerText = "";
+        document.getElementById("passwordError").innerText = "";
+        document.getElementById("confirmPasswordError").innerText = "";
+
+        // Validate username
+        if (username.length < 5 || username.length > 15) {
+            document.getElementById("usernameError").innerText = "Username should be between 5 and 15 characters.";
+            return;
+        }
+
+        // Validate email
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            document.getElementById("emailError").innerText = "Invalid email address.";
+            return;
+        }
+
+        // Validate password
+        if (password.length < 8) {
+            document.getElementById("passwordError").innerText = "Password should be at least 8 characters.";
+            return;
+        }
+
+        // Validate confirm password
+        if (password !== confirmPassword) {
+            document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";
+            return;
+        }
+
+        // If all validations pass, you can submit the form or perform other actions.
+        alert("Form submitted successfully!");
+    }
