@@ -103,6 +103,9 @@ body {
 .input-box {
     margin-bottom: 20px;
 }
+.input-box i {
+    padding-right: 8px;
+}
 
 .form__input {
     width: 100%;
