@@ -73,8 +73,13 @@ body {
 .container {
     max-width: 400px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
     padding: 20px;
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Hide the "Sign Up" form initially */
@@ -106,7 +111,30 @@ body {
 .input-box i {
     padding-right: 8px;
 }
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
 
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
 .form__input {
     width: 100%;
     padding: 10px;
@@ -186,6 +214,7 @@ body {
     transition: transform 0.3s;
 
 }
+
 
 /* Hover Effect for Sections */
 .section:hover {
