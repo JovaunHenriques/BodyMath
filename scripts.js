@@ -133,5 +133,6 @@ function toggleForms () {
         }
 
         // If all validations pass, you can submit the form or perform other actions.
+        console.log("Form submitted successfully!")
         alert("Form submitted successfully!");
     }
