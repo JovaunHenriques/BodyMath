@@ -330,12 +330,12 @@ footer {
 /* Registration Modal Styles */
 .my-modal {
     display: block;
-    position: fixed;
     top: 0;
     left: 100;
     width: 50%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
     z-index: 1000; /* Ensure it's above other content */
 }
 
