@@ -358,3 +358,22 @@ footer {
     font-size: 20px;
     cursor: pointer;
 }
+
+#diagram-container {
+    position: relative;
+}
+
+.diagram-image {
+    position: relative;
+    cursor: pointer;
+    height: 30%;
+    width: 30%;
+    /* Add more styling as needed */
+}
+#fThigh{
+    position: relative;
+    right: 10px;
+    top: 10px;
+    bottom: 40px;
+    left: 10px;
+}
