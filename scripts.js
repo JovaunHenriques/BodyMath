@@ -136,3 +136,17 @@ function toggleForms () {
         console.log("Form submitted successfully!")
         alert("Form submitted successfully!");
     }
+
+    function bodyFunction() {
+        const diagramImages = document.querySelectorAll('.diagram-image');
+    
+        diagramImages.forEach(image => {
+            image.addEventListener('click', function () {
+                // Handle click event for each image
+                const imageId = this.id;
+                alert(`You clicked on ${imageId}`);
+                // Add more interactive functionality here
+            });
+        });
+    }
+    

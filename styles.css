@@ -366,14 +366,28 @@ footer {
 .diagram-image {
     position: relative;
     cursor: pointer;
-    height: 30%;
+    height: 25%;
     width: 30%;
     /* Add more styling as needed */
 }
+#neck{
+    position: absolute;
+    top: -700px;
+    left: 248px;
+    height: 15%;
+    width: 30%;
+}
 #fThigh{
-    position: relative;
-    right: 10px;
-    top: 10px;
-    bottom: 40px;
-    left: 10px;
+    position: absolute;
+    top: -526px;
+    left: 248px;
+    height: 14%;
+    width: 30%;
+}
+#tAnterior{
+    position: absolute;
+    top: -356px;
+    left: 265px;
+    height: 14%;
+    width: 27%;
 }
