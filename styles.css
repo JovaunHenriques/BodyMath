@@ -373,9 +373,9 @@ footer {
     z-index: 2;
     /* Add more styling as needed */
 }
-.neck{
-    top: 5%;
-    left: 10%;
-    height: 10%;
-    width: 10%;
+#neck{
+    width: 30%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 2px; /* Adjust the margin-top to move the image down */
+    border: 2px solid black; /* Add a border for styling */
 }
