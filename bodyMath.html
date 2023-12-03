@@ -32,74 +32,28 @@
                  </div>
              </form> 
             </nav>
-            <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
-                <!-- Head -->
-                <circle cx="400" cy="100" r="50" fill="#e0e0e0" />
-            
-                <!-- Neck -->
-                <rect x="390" y="150" width="20" height="30" fill="#e0e0e0" />
-            
-                <!-- Torso -->
-                <rect x="350" y="180" width="100" height="150" fill="#ffcc80" />
-            
-                <!-- Arms -->
-                <polygon points="350,180 310,240 330,280" fill="#ff9999" />
-                <polygon points="450,180 490,240 470,280" fill="#ff9999" />
-            
-                <!-- Forearms -->
-                <polygon points="310,240 310,320 290,340" fill="#ff9999" />
-                <polygon points="490,240 490,320 510,340" fill="#ff9999" />
-            
-                <!-- Hands -->
-                <ellipse cx="290" cy="340" rx="10" ry="15" fill="#e0e0e0" />
-                <ellipse cx="510" cy="340" rx="10" ry="15" fill="#e0e0e0" />
-            
-                <!-- Legs -->
-                <polygon points="375,330 375,480 355,480" fill="#99cc99" />
-                <polygon points="425,330 425,480 445,480" fill="#99cc99" />
-            
-                <!-- Thighs -->
-                <polygon points="375,480 360,580 345,570" fill="#66cc66" />
-                <polygon points="425,480 440,580 455,570" fill="#66cc66" />
-            
-                <!-- Calves -->
-                <polygon points="345,570 330,630 315,620" fill="#66cc66" />
-                <polygon points="455,570 470,630 485,620" fill="#66cc66" />
-            
-                <!-- Feet -->
-                <rect x="315" y="620" width="30" height="20" fill="#e0e0e0" />
-                <rect x="455" y="620" width="30" height="20" fill="#e0e0e0" />
-            
-                <!-- Labels for illustration -->
-                <text x="400" y="80" text-anchor="middle" font-size="20" fill="#333">Head</text>
-                <text x="400" y="340" text-anchor="middle" font-size="20" fill="#333">Torso</text>
-                <text x="335" y="260" text-anchor="middle" font-size="20" fill="#333">Arm</text>
-                <text x="465" y="260" text-anchor="middle" font-size="20" fill="#333">Arm</text>
-                <text x="400" y="600" text-anchor="middle" font-size="20" fill="#333">Leg</text>
-            </svg>
-
-    <div id="diagram-container">
-        <img id="neck" class="diagram-image" src="./body math/front neck.png" alt="frontneck">
-        <img id="fShoulders" class="diagram-image" src="./body math/front of shoulders.png" alt="frontShoulder">
-        <img id="fThigh" class="diagram-image" src="./body math/front thigh.png" alt="frontthigh">
-        <img id="bOblique" class="diagram-image" src="./body math/back oblique.png" alt="backOblique">
-        <img id="bForearm" class="diagram-image" src="./body math/back or forearm.png" alt="backForearm">
-        <img id="bQuads" class="diagram-image" src="./body math/back quads.png" alt="backQuads">
-        <img id="bShoulders" class="diagram-image" src="./body math/back shoulders.png" alt="backShoulder">
-        <img id="biceps" class="diagram-image" src="./body math/biceps.png" alt="Biceps">
-        <img id="calves" class="diagram-image" src="./body math/Calves.png" alt="Calves">
-        <img id="Core" class="diagram-image" src="./body math/Core(abs).png" alt="Core">
-        <img id="forearm" class="diagram-image" src="./body math/forearm.png" alt="Forearm">
-        <img id="iThigh" class="diagram-image" src="./body math/inner thigh.png" alt="Innerthigh">
-        <img id="lAbs" class="diagram-image" src="./body math/lower abs.png" alt="LowerAbs">
-        <img id="lBack" class="diagram-image" src="./body math/lower back.png" alt="LowerBack">
-        <img id="quads" class="diagram-image" src="./body math/quades.png" alt="quades">
-        <img id="tFasciae" class="diagram-image" src="./body math/tensor fasciae latae.png" alt="tensor tFasciae latae">
-        <img id="tAnterior" class="diagram-image" src="./body math/tibilalls anterior.png" alt="tibilalls anterior">
-        <img id="tBack" class="diagram-image" src="./body math/trapezius(back).png" alt="trapezius">
-        <img id="triceps" class="diagram-image" src="./body math/Triceps.png" alt="Triceps">
-        <img id="uAbs" class="diagram-image" src="./body math/upper abs.png" alt="upper abs">
-        <img id="uBack" class="diagram-image" src="./body math/upper back.png" alt="upper back">
+            <div class="container-Svg"></div>
+            <img id="neck" src="./body math/front neck.png" usemap="#image_map">
+            <map name="image_map">
+              <area alt="Neck" title="Neck" href="index.html" coords="485,256 508,284 531,368 377,336 " shape="polygon">
+              <area alt="Neck" title="Neck" href="#" coords="593,255 551,362 706,341 " shape="polygon">
+            </map>
+            <img id="thigh" src="./body math/front thigh.png" usemap="#image_map">
+    <map name="image_map">
+    <area alt="R vastus medialis" title="R vastus medialis" href="#" coords="610,592 585,681 591,804 606,839 641,843 663,827 668,815 661,764 627,705 " shape="polygon">
+    <area alt="L vastus medialis" title="L vastus medialis" href="#" coords="468,595 493,680 493,764 485,830 457,845 425,839 411,806 423,762 449,718 " shape="polygon">
+    <area alt="R vastus Lateralis" title="R vastus Lateralis" href="#" coords="749,501 762,568 758,687 733,773 709,806 693,799 695,753 718,702 742,616 " shape="polygon">
+    <area alt="L vastus Lateralis" title="L vastus Lateralis " href="#" coords="338,499 324,556 321,634 330,712 348,776 368,805 382,802 385,781 381,747 357,682 341,599 " shape="polygon">
+    <area alt="R Restus Femoris" title="R Restus Femoris" href="#" coords="659,376 665,371 673,368 680,376 709,454 724,513 727,587 718,653 696,718 682,729 659,727 641,684 629,619 628,545 637,467 651,416 " shape="polygon">
+    <area alt="L Restus Femoris" title="L Restus Femoris" href="#" coords="410,366 420,369 439,447 454,517 455,594 443,676 431,716 415,726 395,725 375,691 357,607 360,511 381,432 398,387 " shape="polygon">
+    </map>
+            <img id="anterior" src="./body math/tibilalls anterior.png" usemap="#image_map">
+    <map name="image_map">
+    <area alt="R Gastrocnemius" title="R Gastrocnemius" href="#" coords="727,274 733,284 745,443 721,578 682,673 678,558 692,381 " shape="polygon">
+    <area alt="L Gastrocnemius" title="L Gastrocnemius" href="#" coords="323,276 316,330 312,470 349,624 375,676 380,616 369,425 348,323 " shape="polygon">
+    <area alt="R Soleus" title="R Soleus" href="#" coords="624,308 603,357 600,441 623,532 636,528 649,433 642,354 " shape="polygon">
+    <area alt="L Soleus" title="L Soleus" href="#" coords="429,310 444,328 460,406 439,525 425,535 408,429 413,363 " shape="polygon">
+    </map>
     </div>
 
     <footer> <div class="footer-container">

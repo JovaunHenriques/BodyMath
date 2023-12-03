@@ -359,35 +359,23 @@ footer {
     cursor: pointer;
 }
 
-#diagram-container {
+.container-svg{
     position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .diagram-image {
-    position: relative;
-    cursor: pointer;
-    height: 25%;
+    position: absolute;
     width: 30%;
+    height: auto;
+    z-index: 2;
     /* Add more styling as needed */
 }
-#neck{
-    position: absolute;
-    top: -700px;
-    left: 248px;
-    height: 15%;
-    width: 30%;
-}
-#fThigh{
-    position: absolute;
-    top: -526px;
-    left: 248px;
-    height: 14%;
-    width: 30%;
-}
-#tAnterior{
-    position: absolute;
-    top: -356px;
-    left: 265px;
-    height: 14%;
-    width: 27%;
+.neck{
+    top: 5%;
+    left: 10%;
+    height: 10%;
+    width: 10%;
 }
