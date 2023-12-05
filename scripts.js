@@ -138,7 +138,7 @@ function toggleForms () {
     }
 
     function bodyFunction() {
-        const diagramImages = document.querySelectorAll('.diagram-image');
+        const diagramImages = document.querySelectorAll('#image_map');
     
         diagramImages.forEach(image => {
             image.addEventListener('click', function () {
