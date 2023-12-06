@@ -369,9 +369,8 @@ footer {
   
    #neck,
   #thigh{
-    width: 30%;
-    height: auto;
-    position: absolute;
+    width: 50%;
+    height: 50%;
   }
   
   #neck {
@@ -379,14 +378,13 @@ footer {
   }
   
   #thigh {
-    top: 410px; /* Adjust the top value as needed, added 'px' */
+    top: 60px; /* Adjust the top value as needed, added 'px' */
   }
   
   #anterior {
     top: 810px; /* Adjust the top value as needed, added 'px' */
-    right:710px;
-    width: 29%;
+    right:620px;
+    width: 28.5%;
     height: auto;
-    position: absolute;
   }
   
