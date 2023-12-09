@@ -388,3 +388,15 @@ footer {
     height: auto;
   }
   
+  .glow {
+    animation: glow 1s infinite alternate; /* Adjust animation duration as needed */
+  }
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #00ff00; /* Green glow color, adjust as needed */
+    }
+    100% {
+      box-shadow: 0 0 20px #00ff00; /* Adjust the spread and color as needed */
+    }
+  }
