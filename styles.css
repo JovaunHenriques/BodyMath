@@ -277,6 +277,19 @@ textarea {
         font-size: 1.2rem;
     }
 }
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    /* Add styles specific to large screens */
+}
+
+@media only screen and (min-width: 1200px) {
+    /* Add styles specific to extra-large screens */
+}
 
 /* Logo Container Styles */
 .logo-container {
@@ -366,21 +379,21 @@ footer {
   }
   
   #neck {
-    width: 20%;
-    width:auto;
+    width: 35%;
+    height:auto;
     top: 50px; /* Adjust the top value as needed */
   }
   
   #thigh {
-    width: 35%;
+    width: 23%;
     height: auto;
     top: 10px; /* Adjust the top value as needed, added 'px' */
   }
   
   #anterior {
-    top: 50px; /* Adjust the top value as needed, added 'px' */
-    right:620px;
-    width: 50%;
+    top: 20px; /* Adjust the top value as needed, added 'px' */
+    right:600px;
+    width: 30%;
     height: auto;
   }
   

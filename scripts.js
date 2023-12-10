@@ -196,15 +196,15 @@ function scaleMap(image, map) {
         console.log(`Scaled Coordinates: ${scaledCoords}`);
     }
 }
-// for (const area of areaElements) {
-//     area.classList.remove("glow");
+for (const area of areaElements) {
+    area.classList.remove("glow");
 
-//     // Add event listeners for hover effect
-//     area.addEventListener("mouseenter", function () {
-//         this.classList.add("glow");
-//     });
+    // Add event listeners for hover effect
+    area.addEventListener("mouseenter", function () {
+        this.classList.add("glow");
+    });
 
-//     area.addEventListener("mouseleave", function () {
-//         this.classList.remove("glow");
-//     });
-// }
+    area.addEventListener("mouseleave", function () {
+        this.classList.remove("glow");
+    });
+}
