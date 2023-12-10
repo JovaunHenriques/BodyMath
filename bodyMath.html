@@ -35,25 +35,30 @@
                 </form>
         </nav>
         <div class="body-container">
-            <img id="neck" src="./body math/front neck.png" usemap="#neckimage_map">
+            <img id="neck" class="limbs" src="./body math/front neck.png" usemap="#neckimage_map">
             <map id="neckMap" name="neckimage_map">
-                <area alt="neck" title="neck" href="./index.html" shape="polygon">
+                <area 
+                    alt="neck" 
+                    title="neck" 
+                    href="./index.html"
+                    originalCoords="468,225,378,330,549,384,702,335,610,223,537,242" 
+                    shape="polygon">
             </map>
 
-            <img id="thigh" src="./body math/front thigh.png" usemap="#thighimage_map">
-            <map name="thighimage_map">
+            <img id="thigh" class="limbs" src="./body math/front thigh.png" usemap="#thighimage_map">
+            <map id="thighMap" name="thighimage_map">
                 <area alt="L vastus medialis" title="L vastus medialis" href="#"
-                    coords="410,364,478,584,410,859,310,657 " shape="polygon">
+                originalCoords="410,364,478,584,410,859,310,657 " shape="polygon">
                 <area alt="R vastus Lateralis" title="R vastus Lateralis" href="#"
-                    coords="672,367,768,580,673,863,588,635" shape="polygon">
+                originalCoords="672,367,768,580,673,863,588,635" shape="polygon">
             </map>
 
-            <img id="anterior" src="./body math/tibilalls anterior.png" usemap="#anteriorimage_map">
-            <map name="feetimage_map">
+            <img id="anterior" class="limbs" src="./body math/tibilalls anterior.png" usemap="#anteriorimage_map">
+            <map id="anteriorMap" name="anteriorimage_map">
                 <area alt="L Gastrocnemius" title="L Gastrocnemius" href="#"
-                    coords="309,272,343,686,470,457,457,295" shape="polygon">
+                originalCoords="309,272,343,686,470,457,457,295" shape="polygon">
                 <area alt="R Soleus" title="R Soleus" href="#"
-                    coords="734,259,698,697,587,499,607,295" shape="polygon">
+                originalCoords="734,259,698,697,587,499,607,295" shape="polygon">
             </map>
         </div>
         <footer>
@@ -68,7 +73,7 @@
                 <p class="copyright" id="copyfooter">&copy; 2023 BodyMath. All rights reserved.</p>
             </div>
         </footer>
-        <script src="./scripts3 copy.js"></script>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>

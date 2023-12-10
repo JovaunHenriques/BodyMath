@@ -264,7 +264,6 @@ textarea {
     font-size: 1rem; /* Adjust font size for smaller screens */
     }
 }
-
     .navbar.active ul {
         display: flex;
         flex-direction: column;

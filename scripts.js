@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("contactPage").addEventListener("click", function () {
             navigateTo("contactpage");
-            
+
             setupNavigationLinks();
         });
     }
@@ -49,48 +49,48 @@ document.addEventListener("DOMContentLoaded", function () {
 
 window.addEventListener("resize", scaleMap);
 // Handle click on show combined form button
-function showRegistration(){
+function showRegistration() {
     let registrationform = document.getElementById("registration");
     registrationform.classList.remove("form--hidden");
 }
-function hideRegistrastion(){
+function hideRegistrastion() {
     let registrationform = document.getElementById("registration");
     registrationform.classList.add("form--hidden");
 }
-function showLogin (){
+function showLogin() {
     let loginform = document.getElementById("combinedFormModal");
     loginform.classList.remove("form--hidden");
 }
-function hideLogin (){
+function hideLogin() {
     let loginform = document.getElementById("combinedFormModal");
     loginform.classList.add("form--hidden");
 }
-function toggleRegistration (){
+function toggleRegistration() {
     let flipRegistragtion = document.getElementById("registration");
-     if (flipRegistragtion.classList.contains("form--hidden")){
+    if (flipRegistragtion.classList.contains("form--hidden")) {
         showRegistration();
-     }else {
+    } else {
         hideRegistrastion();
-     }
+    }
 }
-function toggleForms () {
+function toggleForms() {
     const registrationForm = document.getElementById("combinedFormModal");
-    if (registrationForm.classList.contains("form--hidden")){
+    if (registrationForm.classList.contains("form--hidden")) {
         console.log("hiding registrationForm");
         hideRegistrastion();
         showLogin();
-        
-        }
-        else {
-            console.log("showing registrationForm");
-            showRegistration();
-            hideLogin();
-        }
-    
+
+    }
+    else {
+        console.log("showing registrationForm");
+        showRegistration();
+        hideLogin();
+    }
+
 };
 
 // Handle click on Log In/Sign Up link
- 
+
 // Handle click on close modal button
 const closeModalButton = document.getElementById("closeModal");
 closeModalButton.addEventListener("click", function () {
@@ -152,42 +152,59 @@ function bodyFunction() {
         });
     });
 }
-    
-function scaleMap(){
-    let points = [
-        {"x": 468, "y": 225},
-        {"x": 378, "y": 330},
-        {"x": 549, "y": 384},
-        {"x": 702, "y": 335},
-        {"x": 610, "y": 223},
-        {"x": 537, "y": 242},
-    ];
-    let image = document.getElementById("neck");
-    let imageMap = document.getElementById("neckMap");
-    
-    let scaledPoints = [];
-    let scaledCoords = "";
-    
+
+const resizeObserver = new ResizeObserver((entries) => {
+    for (const entry of entries) {
+        // let rawPoints = entry.target.getAttribute("coords");
+        let image = document.getElementById(entry.target.id)
+        let map = document.getElementById(`${entry.target.id}Map`)
+        scaleMap(image, map);
+    }
+});
+
+let limbs = document.getElementsByClassName("limbs");
+for (const limb of limbs) {
+    resizeObserver.observe(limb);
+}
+
+function scaleMap(image, map) {
     let oldHeight = image.naturalHeight;
     let oldWidth = image.naturalWidth;
     let newHeight = image.clientHeight;
     let newWidth = image.clientWidth;
-    
+
     let heightRatio = newHeight / oldHeight;
     let widthRatio = newWidth / oldWidth;
 
-    for (const point in points) {
-        let scaledPoint = {
-            "x": Math.floor(points[point].x * heightRatio),
-            "y": Math.floor(points[point].y * widthRatio)
+    for (let i = 0; i < map.childElementCount; i++) {
+        let rawCoords = map.children[i].getAttribute("originalCoords");
+        let rawPoints = rawCoords.split(",")
+        let scaledCoords = ""
+        for (let j = 0; j < rawPoints.length; j += 2) {
+            let point = { x: '0', y: '0' };
+            point.x = rawPoints[j];
+            point.y = rawPoints[j + 1];
+            let scaledPoint = {
+                "x": Math.floor(point.x * heightRatio),
+                "y": Math.floor(point.y * widthRatio)
+            }
+            scaledCoords += `${scaledPoint.x},${scaledPoint.y},`;
         }
-        scaledPoints.push(scaledPoint);
-        scaledCoords += `${scaledPoint.x},${scaledPoint.y},`;
+        scaledCoords = scaledCoords.slice(0, -1);
+        map.children[i].setAttribute("coords", scaledCoords);
+        console.log(`Raw Coordinates: ${rawCoords}`);
+        console.log(`Scaled Coordinates: ${scaledCoords}`);
     }
-    
-    scaledCoords = scaledCoords.slice(0, -1);
-    console.log(`original points: ${JSON.stringify(points, null, 4)}\nscaled points: ${JSON.stringify(scaledPoints, null, 4)}`)
-    console.log(`Scaled Coordinates: ${scaledCoords}`);
-    
-    imageMap.children[0].setAttribute("coords", scaledCoords);
 }
+// for (const area of areaElements) {
+//     area.classList.remove("glow");
+
+//     // Add event listeners for hover effect
+//     area.addEventListener("mouseenter", function () {
+//         this.classList.add("glow");
+//     });
+
+//     area.addEventListener("mouseleave", function () {
+//         this.classList.remove("glow");
+//     });
+// }
