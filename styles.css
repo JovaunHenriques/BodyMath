@@ -365,25 +365,22 @@ footer {
     position: relative;
   }
   
-  
-   #neck,
-  #thigh{
-    width: 30%;
-    height: auto;
-  }
-  
   #neck {
+    width: 20%;
+    width:auto;
     top: 50px; /* Adjust the top value as needed */
   }
   
   #thigh {
+    width: 35%;
+    height: auto;
     top: 10px; /* Adjust the top value as needed, added 'px' */
   }
   
   #anterior {
     top: 50px; /* Adjust the top value as needed, added 'px' */
     right:620px;
-    width: 28.5%;
+    width: 50%;
     height: auto;
   }
   
