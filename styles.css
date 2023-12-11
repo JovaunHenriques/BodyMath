@@ -396,7 +396,23 @@ footer {
     width: 30%;
     height: auto;
   }
-  
+  /* Style for the pop-up */
+  .popup {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Style for the element that triggers the pop-up */
+.hover-element {
+    position: relative;
+    cursor: pointer;
+}
+
   .glow {
     animation: glow 1s infinite alternate; /* Adjust animation duration as needed */
   }

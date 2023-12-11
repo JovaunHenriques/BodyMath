@@ -196,6 +196,17 @@ function scaleMap(image, map) {
         console.log(`Scaled Coordinates: ${scaledCoords}`);
     }
 }
+ // Function to show the pop-up
+ function showPopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "block";
+}
+
+// Function to hide the pop-up
+function hidePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
 // for (const area of areaElements) {
 //     area.classList.remove("glow");
 
