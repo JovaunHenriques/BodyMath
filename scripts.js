@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    scaleMap();
     function addSmoothScrolling() {
         document.querySelectorAll('a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -42,8 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
             setupNavigationLinks();
         });
     }
-
-
     // addSmoothScrolling();
 });
 
@@ -197,25 +194,13 @@ function scaleMap(image, map) {
     }
 }
  // Function to show the pop-up
- function showPopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "block";
-}
+    function showPopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "block";
+    }
 
-// Function to hide the pop-up
-function hidePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-}
-// for (const area of areaElements) {
-//     area.classList.remove("glow");
-
-//     // Add event listeners for hover effect
-//     area.addEventListener("mouseenter", function () {
-//         this.classList.add("glow");
-//     });
-
-//     area.addEventListener("mouseleave", function () {
-//         this.classList.remove("glow");
-//     });
-// }
+    // Function to hide the pop-up
+    function hidePopup() {
+        var popup = document.getElementById("popup");
+        popup.style.display = "none";
+    }
