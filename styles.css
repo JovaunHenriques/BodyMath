@@ -14,11 +14,12 @@ body {
     font-weight: 500;
     text-decoration: none;
     padding: 48px;
-    margin:auto;
-    margin-top:-15px;
+    margin: auto;
+    margin-top: -15px;
     margin-right: 20px;
     width: 0;
 }
+
 .navbar div:hover::before {
     width: 100%;
     opacity: 1;
@@ -26,9 +27,11 @@ body {
 
 /* Logo Icon Styles */
 .nav-img {
-    width: 40px; /* Adjust the size as needed */
+    width: 40px;
+    /* Adjust the size as needed */
     height: 30px;
-    margin-right: 10px; /* Adds some space between the logo and the navigation links */
+    margin-right: 10px;
+    /* Adds some space between the logo and the navigation links */
 }
 
 .search-bar {
@@ -40,6 +43,7 @@ body {
     display: flex;
     vertical-align: middle;
 }
+
 .search-bar input {
     width: 100%;
     height: auto;
@@ -51,10 +55,12 @@ body {
     color: rgb(205, 205, 218);
     padding: 10px;
 }
+
 .search-bar input::placeholder {
     color: rgb(144, 144, 172);
     vertical-align: middle;
 }
+
 .search-bar button {
     width: 40px;
     height: 100%;
@@ -66,9 +72,63 @@ body {
     cursor: pointer;
     padding: 5px;
 }
+
 .search-bar button i {
     font-size: 22px;
     color: rgb(28, 28, 59);
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    nav img {
+        display: none;
+        /* Hide the logo on smaller screens */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    nav a {
+        margin: 5px;
+        /* Adjust the spacing between navigation items for smaller screens */
+    }
+
+    /* Media query for tablets */
+    @media (max-width: 768px) {
+        /* CSS styles for tablets here */
+    }
+
+    /* Media query for mobile phones */
+    @media (max-width: 480px) {
+        nav img {
+            display: none;
+        }
+
+        nav a {
+            font-size: 1rem;
+            /* Adjust font size for smaller screens */
+            text-align: center;
+        }
+    }
+
+    .navbar.active ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Center items horizontally */
+    }
+
+    .navbar.active div {
+        margin: 10px;
+    }
+
+    .navbar.active a {
+        font-size: 1.2rem;
+    }
 }
 
 .container {
@@ -109,15 +169,18 @@ body {
 .input-box {
     margin-bottom: 20px;
 }
+
 .input-box i {
     padding-right: 8px;
 }
+
 label {
     display: block;
     margin: 10px 0 5px;
 }
 
-input, textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -136,6 +199,7 @@ textarea {
     font-size: 14px;
     margin-top: 5px;
 }
+
 .form__input {
     width: 100%;
     padding: 10px;
@@ -191,10 +255,10 @@ textarea {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
+}
 
 /* Section Styles */
-.infoSection{
+.infoSection {
     width: auto;
     padding: 10px;
     background-color: #f2f2f2;
@@ -204,8 +268,9 @@ textarea {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s;
 }
+
 .section {
-    max-width:100vw;
+    max-width: 100vw;
     padding: 10px;
     background-color: #f2f2f2;
     border: 1px solid #ddd;
@@ -216,59 +281,9 @@ textarea {
 
 }
 
-
 /* Hover Effect for Sections */
 .section:hover {
     transform: scale(1.01);
-}
-
-/* Modern Styling for Sections */
-
-/* Responsive styles for smaller screens */
-@media (max-width: 768px) {
-    nav img {
-        display: none; /* Hide the logo on smaller screens */
-    }
-
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-    }
-
-    nav a {
-        margin: 5px; /* Adjust the spacing between navigation items for smaller screens */
-    }
-
-    /* Media query for tablets */
-    @media (max-width: 768px) {
-        /* CSS styles for tablets here */
-    }
-
-    /* Media query for mobile phones */
-    @media (max-width: 480px) {
-        nav img {
-            display: none;
-        }
-        nav a {
-            font-size: 1rem; /* Adjust font size for smaller screens */
-            text-align: center;
-        }
-    }
-
-    .navbar.active ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center items horizontally */
-    }
-
-    .navbar.active div {
-        margin: 10px;
-    }
-
-    .navbar.active a {
-        font-size: 1.2rem;
-    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -287,8 +302,10 @@ textarea {
 
 /* Logo Container Styles */
 .logo-container {
-    border-radius: 50%; /* Creates a round shape */
-    width: 80px; /* Adjust the size as needed */
+    border-radius: 50%;
+    /* Creates a round shape */
+    width: 80px;
+    /* Adjust the size as needed */
     height: 80px;
     background-color: #333;
     display: flex;
@@ -299,24 +316,30 @@ textarea {
 
 /* Logo Image Styles */
 .logo-container img {
-    width: 60px; /* Adjust the size of the logo image */
+    width: 60px;
+    /* Adjust the size of the logo image */
     height: 60px;
     position: relative;
     right: 20px;
     bottom: 23px;
-    border-radius: 20%; /* Clip the image to match the container shape */
+    border-radius: 20%;
+    /* Clip the image to match the container shape */
 }
+
 /* Footer Styles */
 footer {
-    background-color: #333; /* Change this to your preferred background color */
-    color: #fff; /* Change this to your preferred text color */
+    background-color: #333;
+    /* Change this to your preferred background color */
+    color: #fff;
+    /* Change this to your preferred text color */
     padding: 20px 0;
     text-align: center;
 }
 
 /* Centering footer contents */
 .footer-container {
-    max-width: 1200px; /* Adjust the max width as needed */
+    max-width: 1200px;
+    /* Adjust the max width as needed */
     margin: 0 auto;
 }
 
@@ -324,12 +347,14 @@ footer {
 .social-links a {
     font-size: 24px;
     margin: 0 10px;
-    color: #fff; /* Change this to your preferred social icon color */
+    color: #fff;
+    /* Change this to your preferred social icon color */
     text-decoration: none;
 }
 
 .social-links a:hover {
-    color: #ff9900; /* Change this to your preferred color on hover */
+    color: #ff9900;
+    /* Change this to your preferred color on hover */
 }
 
 
@@ -342,7 +367,8 @@ footer {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
-    z-index: 1000; /* Ensure it's above other content */
+    z-index: 1000;
+    /* Ensure it's above other content */
 }
 
 .modal-content {
@@ -350,7 +376,8 @@ footer {
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
-    background-color: #fff; /* Background color of the modal */
+    background-color: #fff;
+    /* Background color of the modal */
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -370,28 +397,32 @@ footer {
     flex-direction: column;
     align-items: center;
     position: relative;
-  }
-  
-  #neck {
+}
+
+#neck {
     width: 35%;
-    height:auto;
-    top: 50px; /* Adjust the top value as needed */
-  }
-  
-  #thigh {
+    height: auto;
+    top: 50px;
+    /* Adjust the top value as needed */
+}
+
+#thigh {
     width: 23%;
     height: auto;
-    top: 10px; /* Adjust the top value as needed, added 'px' */
-  }
-  
-  #anterior {
-    top: 20px; /* Adjust the top value as needed, added 'px' */
-    right:600px;
+    top: 10px;
+    /* Adjust the top value as needed, added 'px' */
+}
+
+#anterior {
+    top: 20px;
+    /* Adjust the top value as needed, added 'px' */
+    right: 600px;
     width: 30%;
     height: auto;
-  }
-  /* Style for the pop-up */
-  .popup {
+}
+
+/* Style for the pop-up */
+.popup {
     display: none;
     position: absolute;
     background-color: #70b5ca;
@@ -411,15 +442,19 @@ footer {
     height: auto;
 }
 
-  .glow {
-    animation: glow 1s infinite alternate; /* Adjust animation duration as needed */
-  }
+.glow {
+    animation: glow 1s infinite alternate;
+    /* Adjust animation duration as needed */
+}
 
-  @keyframes glow {
+@keyframes glow {
     0% {
-      box-shadow: 0 0 5px #00ff00; /* Green glow color, adjust as needed */
+        box-shadow: 0 0 5px #00ff00;
+        /* Green glow color, adjust as needed */
     }
+
     100% {
-      box-shadow: 0 0 20px #00ff00; /* Adjust the spread and color as needed */
+        box-shadow: 0 0 20px #00ff00;
+        /* Adjust the spread and color as needed */
     }
-  }
+}
