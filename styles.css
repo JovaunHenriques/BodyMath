@@ -400,7 +400,7 @@ footer {
   .popup {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #70b5ca;
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -409,8 +409,11 @@ footer {
 
 /* Style for the element that triggers the pop-up */
 .hover-element {
-    position: relative;
+    position: absolute;
     cursor: pointer;
+    left: 37px;
+    top: 297px;
+
 }
 
   .glow {

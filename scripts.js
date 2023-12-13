@@ -202,3 +202,47 @@ function scaleMap(image, map) {
         var popup = document.getElementById("popup");
         popup.style.display = "none";
     }
+    // Get all elements
+    var links = document.querySelectorAll('area');
+
+    // Iterate over each anchor element
+    links.forEach(function(link) {
+        // Add mouseover event listener
+        link.addEventListener('mouseover', function(e) {
+            // Get the tooltip element using the data attribute
+            var tooltipElement = document.getElementById('popup');
+
+            // Calculate the position and display the tooltip
+            tooltipElement.style.left = e.pageX + -127 + 'px';
+            tooltipElement.style.top = e.pageY + -297 + 'px';
+            tooltipElement.style.display = 'block';
+        });
+
+        // Add mouseout event listener
+        link.addEventListener('mouseout', function() {
+            // Get the tooltip element using the data attribute
+            var tooltipElement = document.getElementById('popup');
+
+            // Hide the tooltip
+            tooltipElement.style.display = 'none';
+        });
+    });
+
+// function addAnnotation() {
+//     var userNote = prompt('Add a note:');
+//     // Store userNote and display it on the body map
+//     // (Actual implementation may involve saving data to a database)
+//     alert('Note added: ' + userNote);
+// }
+    // // Example using vanilla JavaScript
+    // function addAnnotation() {
+    //     var userNote = prompt('Add a note:');
+        
+    //     // Store userNote in local storage (you may want to use a database)
+    //     var storedNotes = localStorage.getItem('userNotes') || '[]';
+    //     var notesArray = JSON.parse(storedNotes);
+    //     notesArray.push(userNote);
+    //     localStorage.setItem('userNotes', JSON.stringify(notesArray));
+        
+    //     alert('Note added: ' + userNote);
+    // }
