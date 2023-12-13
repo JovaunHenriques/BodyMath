@@ -411,9 +411,10 @@ footer {
 .hover-element {
     position: absolute;
     cursor: pointer;
-    left: 37px;
-    top: 297px;
-
+    left: 0px;
+    top: 0px;
+    width: auto;
+    height: auto;
 }
 
   .glow {
