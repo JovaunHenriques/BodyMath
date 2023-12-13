@@ -34,133 +34,131 @@
                     </div>
                 </form>
         </nav>
-        <div class="form-container register-link">
-            <form class="form form--hidden" id="registration">
-                <h2 class="form__title">Sign Up</h2>
-                <div class="form__message form__message--error"></div>
-                <div class="input-box">
+    </header>
+    <div class="form-container register-link">
+        <form class="form form--hidden" id="registration">
+            <h2 class="form__title">Sign Up</h2>
+            <div class="form__message form__message--error"></div>
+            <div class="input-box">
 
-                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username..."
-                        required>
-                    <span id="usernameError" class="error-message"></span><br>
-                </div>
-                <div class="input-box">
-
-                    <input type="email" class="form__input" autofocus placeholder="Email address..." required>
-                    <span id="emailError" class="error-message"></span><br>
-                </div>
-                <div class="input-box">
-
-                    <input type="password" class="form__input" autofocus placeholder="Enter your password..." required>
-                    <span id="passwordError" class="error-message"></span><br>
-                </div>
-                <div class="input-box">
-
-                    <input type="password" class="form__input" autofocus placeholder="Confirm password..." required>
-                    <span id="confirmPasswordError" class="error-message"></span><br>
-                </div>
-                <button type="submit" class="btn" onclick="validateForm()" id="login-button">Sign Up</button>
-                <div class="register-link">
-                    <p>Already have an account? <a class="form__link" onclick="toggleForms()">Log In</a></p>
-                </div>
-            </form>
-        </div>
-        </div>
-
-        <!-- Registration Modal -->
-        <div id="combinedFormModal" class="my-modal form--hidden">
-            <div class="modal-content">
-                <span class="close" id="closeModal">&times;</span>
-                <h2>Login</h2>
-                <form id="loginForm">
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username/E-mail" placeholder="username/E-mail" required><br>
-
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Password" required><br>
-
-                    <button id="closeModal" onclick="toggleForms()">Close</button>
-                </form>
-
-                <div id="message"></div>
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username..." required>
+                <span id="usernameError" class="error-message"></span><br>
             </div>
+            <div class="input-box">
+
+                <input type="email" class="form__input" autofocus placeholder="Email address..." required>
+                <span id="emailError" class="error-message"></span><br>
+            </div>
+            <div class="input-box">
+
+                <input type="password" class="form__input" autofocus placeholder="Enter your password..." required>
+                <span id="passwordError" class="error-message"></span><br>
+            </div>
+            <div class="input-box">
+
+                <input type="password" class="form__input" autofocus placeholder="Confirm password..." required>
+                <span id="confirmPasswordError" class="error-message"></span><br>
+            </div>
+            <button type="submit" class="btn" onclick="validateForm()" id="login-button">Sign Up</button>
+            <div class="register-link">
+                <p>Already have an account? <a class="form__link" onclick="toggleForms()">Log In</a></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Registration Modal -->
+    <div id="combinedFormModal" class="my-modal form--hidden">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username/E-mail" placeholder="username/E-mail" required><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+                <button id="closeModal" onclick="toggleForms()">Close</button>
+            </form>
+
+            <div id="message"></div>
         </div>
-        <div class="body-container">
-            <img id="neck" class="limbs" src="./body math/front_neck.png" onmouseover="showPopup()"
-                onmouseout="hidePopup()" usemap="#neckimage_map">
-            <map id="neckMap" name="neckimage_map">
-                <area alt="neck" title="neck" href="./index.html" originalCoords="297,37,191,130,516,130,407,36"
-                    shape="polygon">
+    </div>
+    <div class="body-container">
+        <img id="neck" class="limbs" src="./body math/front_neck.png" onmouseover="showPopup()" onmouseout="hidePopup()"
+            usemap="#neckimage_map">
+        <map id="neckMap" name="neckimage_map">
+            <area alt="neck" title="neck" href="./index.html" originalCoords="297,37,191,130,516,130,407,36"
+                shape="polygon">
+        </map>
+        <div class="hover-element">
+            <div id="popup" class="popup">
+                <h3>Neck Extension</h3>
+                <ol>
+                    <li>Slowly pull your head back and tuck your chin. This places your head directly above your
+                        shoulders.</li>
+                    <li>Slowly tilt your head back looking up at the ceiling.</li>
+                    <li>Gently rotate your head back and forth about three or four times. Your head should only turn
+                        about 1 centimeter. This helps to bring your neck all the way to end range.</li>
+                    <li>Stop when a stretch is felt in the muscles in the front of your neck.</li>
+                    <li>Hold for a count of 10.</li>
+                    <li>Repeat 5 times.</li>
+                </ol>
+            </div>
+
+            <img id="thigh" class="limbs" src="./body math/quades.png"
+                onmouseover="showPopup('popup2', 'This is pop-up 2')" onmouseout="hidePopup('popup2')"
+                usemap="#thighimage_map">
+            <map id="thighMap" name="thighimage_map">
+                <area alt="L vastus medialis" title="L vastus medialis" href="#"
+                    originalCoords="112,187,17,465,116,680,179,415" shape="polygon">
+                <area alt="R vastus Lateralis" title="R vastus Lateralis" href="#"
+                    originalCoords="371,184,294,450,323,688,473,440" shape="polygon">
             </map>
             <div class="hover-element">
-                <div id="popup" class="popup">
-                    <h3>Neck Extension</h3>
+                <div id="popup2" class="popup">
+                    <h3>Dumbbell Reverse Lunge to Stepup</h3>
+                    Why It Works:
+                    It strengthens the quads, along with the glutes and hamstrings, while also stabilizing the hips.
+
+                    <p>How to Do It:</p>
                     <ol>
-                        <li>Slowly pull your head back and tuck your chin. This places your head directly above your
-                            shoulders.</li>
-                        <li>Slowly tilt your head back looking up at the ceiling.</li>
-                        <li>Gently rotate your head back and forth about three or four times. Your head should only turn
-                            about 1 centimeter. This helps to bring your neck all the way to end range.</li>
-                        <li>Stop when a stretch is felt in the muscles in the front of your neck.</li>
-                        <li>Hold for a count of 10.</li>
-                        <li>Repeat 5 times.</li>
+                        <li>Hold dumbbells in both hands (25-35lbs/50-70lbs total).</li>
+                        <li>Stand facing a bench. Step back into a reverse lunge.</li>
+                        <li>As you come up from the lunge, step onto the bench with the same working leg.</li>
+                        <li>Step down, then lunge back with the opposite leg, coming back up, and immediately
+                            transitioning into a step up.</li>
+                        Prescription:
+                        Reps: 10 on each side
+
+                        Sets: 3
+
+                        Rest: 2 min.
+
+                        rest between sets
                     </ol>
                 </div>
-
-                <img id="thigh" class="limbs" src="./body math/quades.png"
-                    onmouseover="showPopup('popup2', 'This is pop-up 2')" onmouseout="hidePopup('popup2')"
-                    usemap="#thighimage_map">
-                <map id="thighMap" name="thighimage_map">
-                    <area alt="L vastus medialis" title="L vastus medialis" href="#"
-                        originalCoords="112,187,17,465,116,680,179,415" shape="polygon">
-                    <area alt="R vastus Lateralis" title="R vastus Lateralis" href="#"
-                        originalCoords="371,184,294,450,323,688,473,440" shape="polygon">
-                </map>
-                <div class="hover-element">
-                    <div id="popup2" class="popup">
-                        <h3>Dumbbell Reverse Lunge to Stepup</h3>
-                        Why It Works:
-                        It strengthens the quads, along with the glutes and hamstrings, while also stabilizing the hips.
-
-                        <p>How to Do It:</p>
-                        <ol>
-                            <li>Hold dumbbells in both hands (25-35lbs/50-70lbs total).</li>
-                            <li>Stand facing a bench. Step back into a reverse lunge.</li>
-                            <li>As you come up from the lunge, step onto the bench with the same working leg.</li>
-                            <li>Step down, then lunge back with the opposite leg, coming back up, and immediately
-                                transitioning into a step up.</li>
-                            Prescription:
-                            Reps: 10 on each side
-
-                            Sets: 3
-
-                            Rest: 2 min.
-
-                            rest between sets
-                        </ol>
-                    </div>
-                </div>
-                <img id="anterior" class="limbs" src="./body math/tibilalls_anterior.png" usemap="#anteriorimage_map">
-                <map id="anteriorMap" name="anteriorimage_map">
-                    <area alt="L Gastrocnemius" title="L Gastrocnemius" href="#"
-                        originalCoords="129,104,183,519,269,150" shape="polygon">
-                    <area alt="R Soleus" title="R Soleus" href="#" originalCoords="429,135,479,527,546,104"
-                        shape="polygon">
-                </map>
             </div>
-            <footer>
-                <div class="footer-container">
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/"><i
-                                class="fab fa-linkedin"></i></a>
-                    </div>
-                    <p class="copyright" id="copyfooter">&copy; 2023 BodyMath. All rights reserved.</p>
+            <img id="anterior" class="limbs" src="./body math/tibilalls_anterior.png" usemap="#anteriorimage_map">
+            <map id="anteriorMap" name="anteriorimage_map">
+                <area alt="L Gastrocnemius" title="L Gastrocnemius" href="#" originalCoords="129,104,183,519,269,150"
+                    shape="polygon">
+                <area alt="R Soleus" title="R Soleus" href="#" originalCoords="429,135,479,527,546,104" shape="polygon">
+            </map>
+        </div>
+        <footer>
+            <div class="footer-container">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/"><i
+                            class="fab fa-linkedin"></i></a>
                 </div>
-            </footer>
-            <script src="./scripts.js"></script>
+                <p class="copyright" id="copyfooter">&copy; 2023 BodyMath. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>
