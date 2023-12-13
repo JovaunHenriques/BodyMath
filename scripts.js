@@ -246,3 +246,129 @@ function addAnnotation() {
         
         alert('Note added: ' + userNote);
     }
+// Function to fetch and display community forum posts
+function fetchCommunityPosts() {
+    fetch('/api/community/posts')  // Replace with your actual API endpoint
+        .then(response => response.json())
+        .then(posts => {
+            displayCommunityPosts(posts);
+        })
+        .catch(error => console.error('Error fetching community posts:', error));
+}
+
+// Function to display posts in the post-container
+function displayCommunityPosts(posts) {
+    var postContainer = document.getElementById('post-container');
+    postContainer.innerHTML = '';  // Clear existing posts
+
+    posts.forEach(post => {
+        var postElement = document.createElement('div');
+        postElement.innerHTML = `
+            <h4>${post.author}</h4>
+            <p>${post.content}</p>
+            <button onclick="showReplies(${post.id})">Show Replies</button>
+            <div id="replies-${post.id}"></div>
+            <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
+            <button onclick="submitReply(${post.id})">Reply</button>
+        `;
+
+        postContainer.appendChild(postElement);
+    });
+}
+
+// Function to fetch and display community forum posts from Local Storage
+function fetchCommunityPosts() {
+    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+    displayCommunityPosts(storedPosts);
+}
+
+// Function to display posts in the post-container
+function displayCommunityPosts(posts) {
+    var postContainer = document.getElementById('post-container');
+    postContainer.innerHTML = '';  // Clear existing posts
+
+    posts.forEach(post => {
+        var postElement = document.createElement('div');
+        postElement.innerHTML = `
+            <h4>${post.author}</h4>
+            <p>${post.content}</p>
+            <button onclick="showReplies(${post.id})">Show Replies</button>
+            <div id="replies-${post.id}"></div>
+            <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
+            <button onclick="submitReply(${post.id})">Reply</button>
+        `;
+
+        postContainer.appendChild(postElement);
+    });
+}
+
+// Function to submit a new post
+function submitPost() {
+    var postContent = document.getElementById('post-content').value;
+
+    // Generate a unique post ID (this is a simplified method)
+    var postId = new Date().getTime();
+
+    var newPost = {
+        id: postId,
+        author: "User",  // You can replace this with the actual user's name
+        content: postContent,
+        replies: []
+    };
+
+    // Retrieve existing posts from Local Storage
+    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+
+    // Add the new post
+    storedPosts.push(newPost);
+
+    // Save the updated posts back to Local Storage
+    localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
+
+    // Display the updated posts
+    fetchCommunityPosts();
+}
+
+// Function to show replies for a post
+function showReplies(postId) {
+    var repliesContainer = document.getElementById(`replies-${postId}`);
+    repliesContainer.innerHTML = '';
+
+    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+    var post = storedPosts.find(p => p.id === postId);
+
+    if (post && post.replies.length > 0) {
+        post.replies.forEach(reply => {
+            var replyElement = document.createElement('div');
+            replyElement.innerHTML = `<p>${reply.author}: ${reply.content}</p>`;
+            repliesContainer.appendChild(replyElement);
+        });
+    }
+}
+
+// Function to submit a reply to a post
+function submitReply(postId) {
+    var replyContent = document.getElementById(`reply-content-${postId}`).value;
+
+    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+    var post = storedPosts.find(p => p.id === postId);
+
+    if (post) {
+        var newReply = {
+            author: "User",  // Replace with the actual user's name
+            content: replyContent
+        };
+
+        // Add the new reply to the post
+        post.replies.push(newReply);
+
+        // Save the updated posts back to Local Storage
+        localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
+
+        // Display the updated replies
+        showReplies(postId);
+    }
+}
+
+// Initial fetch of community posts when the page loads
+fetchCommunityPosts();
