@@ -1,5 +1,5 @@
 html{
-    min-height: 100%;
+    min-height: 120%;
     position: relative;
 }
 /* Reset some default styles and apply some basic styling */
@@ -282,21 +282,22 @@ textarea {
 }
 
 #section1 {
+    top: 150px;
     max-width: 50%;
-    position: relative;
+    position: absolute;
 }
 
 #section2 {
     top: 400px;
     right: 10px;
     max-width: 50%;
-    position: flex;
+    position: absolute;
 }
 
 #section3 {
     max-width: 50%;
-    position: relative;
-    bottom: 1px;
+    position: absolute;
+    bottom: 150px;
 }
 
 .section {
