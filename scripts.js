@@ -290,6 +290,23 @@ function scaleMap(image, map) {
 
         return BMR;
     }
+
+     // Function to open the modal
+     function openchatBox() {
+        document.getElementById('chatBox').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Function to close the modal
+    function closechatBox() {
+        document.getElementById('chatBox').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+    // Function to clear the chat
+    function clearChat() {
+        document.getElementById('chat-content').value = '';
+    }
 // function addAnnotation() {
 //     var userNote = prompt('Add a note:');
 //     // Store userNote and display it on the body map
