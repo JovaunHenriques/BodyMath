@@ -88,42 +88,57 @@
         </div>
     </header>
     <!-- Sections -->
-    <div class="section" id="section1">
-        <h3>Welcome to BodyMath: Your Fitness Companion</h3>
-        <p>
-            Embarking on a fitness journey requires dedication and effort, and we understand that the intricacies of
-            tracking macros and calories can often feel like an additional burden.
-            The tedious task of manually calculating these nutritional components might be draining,
-            especially when you're striving to achieve your fitness goals. Whether you're a seasoned fitness enthusiast
-            or a newcomer to the
-            world of wellness, BodyMath aims to revolutionize and streamline this process for you.
-        </p>
+    <div class="mainIfo1">
+        <div class="section" id="section1">
+            <h3>Welcome to BodyMath: Your Fitness Companion</h3>
+            <p>
+                Embarking on a fitness journey requires dedication and effort, and we understand that the intricacies of
+                tracking macros and calories can often feel like an additional burden.
+                The tedious task of manually calculating these nutritional components might be draining,
+                especially when you're striving to achieve your fitness goals. Whether you're a seasoned fitness
+                enthusiast
+                or a newcomer to the
+                world of wellness, BodyMath aims to revolutionize and streamline this process for you.
+            </p>
+        </div>
     </div>
-
-    <div class="section" id="section2">
-        <h3>What is BodyMath</h3>
-        <p>
-            BodyMath is a web application designed to streamline the often cumbersome task of tracking your nutritional
-            intake
-            and workout routines. Our mission is to empower fitness enthusiasts like you with the tools and information
-            you
-            need to achieve your fitness goals effectively.
-        </p>
+    <div class="mainIfo2">
+        <div class="section" id="section2">
+            <h3>What is BodyMath</h3>
+            <p>
+                BodyMath is an innovative web application dedicated to simplifying the typically complex process of
+                monitoring nutritional intake and workout routines. With a commitment
+                to empowering fitness enthusiasts, our mission is to furnish you with comprehensive tools and
+                information necessary for achieving your fitness goals efficiently. By seamlessly
+                integrating nutrition and exercise tracking, BodyMath transforms the way users approach their fitness
+                journeys, fostering a sense of empowerment and providing valuable insights.
+                Our user-centric platform aims to inspire and guide individuals towards optimal health, facilitating a
+                more informed and personalized approach to fitness management. Welcome to
+                a holistic fitness experience tailored to your unique needs and aspirations.
+            </p>
+        </div>
     </div>
-    <div class="section" id="section3">
-        <!-- Content for section 3 -->
-        <h3>Contact Us</h3>
-        <p>
-            Have questions, suggestions, or encounter issues with BodyMath? Don't hesitate to reach out via email at
-            jovaun@hotmail.com. We value your feedback and are committed to making BodyMath the ultimate fitness
-            companion.
-
-            Start your fitness journey with BodyMath today, and let us help you achieve your goals more efficiently than
-            ever before!
-        </p>
+    <div class="mainIfo3">
+        <div class="section" id="section3">
+            <!-- Content for section 3 -->
+            <h3>Contact Us</h3>
+            <p>
+                Your satisfaction and engagement with BodyMath are paramount to us. If you have inquiries, suggestions,
+                or encounter any issues, we invite you to connect with us
+                via email at jovaun@hotmail.com. Your feedback is a valuable compass guiding our commitment to
+                continually enhance and refine BodyMath, ensuring it remains the
+                epitome of a fitness companion. We are dedicated to addressing your needs promptly and efficiently.
+                Embark on your fitness journey with BodyMath today,
+                and allow us to elevate your experience, providing unparalleled support as you strive towards your
+                wellness goals. We are genuinely excited to be part
+                of your fitness transformation and are confident that, with BodyMath, you'll navigate your journey with
+                newfound ease and enthusiasm. Your success is
+                our success, and we eagerly anticipate being a crucial part of your fitness achievements!
+            </p>
+        </div>
     </div>
     <!-- Button to open the modal -->
-    <button onclick="openchatBox()">Open Chat</button>
+    <button id="chatBtn" onclick="openchatBox()">Open Chat</button>
 
     <!-- Modal -->
     <div id="chatBox" class="chatBox">
@@ -132,31 +147,31 @@
         <textarea id="chat-content" rows="10" cols="30"></textarea>
         <button onclick="clearChat()">Clear Chat</button>
     </div>
-
     <!-- Overlay -->
-<div id="overlay" class="overlay" onclick="closeModal()"></div>
-    <!-- Posts will be dynamically added here -->
-    <!-- <div id="post-container">
+    <div id="overlay" class="overlay" onclick="closeModal()">
+
+        <!-- Posts will be dynamically added here -->
+        <!-- <div id="post-container">
         
     </div> -->
-    <!-- Form for users to submit new posts -->
-    <!-- <div id="new-post-form">
+        <!-- Form for users to submit new posts -->
+        <!-- <div id="new-post-form">
         <textarea id="post-content" placeholder="Write your post..."></textarea>
         <button onclick="submitPost()">Post</button>
     </div> -->
-    <footer>
-        <div class="footer-container">
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/"><i
-                        class="fab fa-linkedin"></i></a>
+        <footer>
+            <div class="footer-container">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/">
+                        <i class="fab fa-linkedin"></i></a>
+                </div>
+                <p>&copy; 2023 BodyMath. All rights reserved.</p>
             </div>
-            <p>&copy; 2023 BodyMath. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="./scripts.js"></script>
+        </footer>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>
