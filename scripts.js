@@ -228,147 +228,209 @@ function scaleMap(image, map) {
         });
     });
 
-function addAnnotation() {
-    var userNote = prompt('Add a note:');
-    // Store userNote and display it on the body map
-    // (Actual implementation may involve saving data to a database)
-    alert('Note added: ' + userNote);
-}
-    // Example using vanilla JavaScript
-    function addAnnotation() {
-        var userNote = prompt('Add a note:');
+    function calculateCalorie(obj)
+    {
+        const age = obj.form.age.value;
+        const gender = obj.form.gender.value;
+        const bodyFat = obj.form.bodyFat.value;
+        const height = obj.form.height.value;
+        const weight = obj.form.weight.value;
+        const activity = obj.form.activity.value;
+        const unit = obj.form.unit.value;
+        const formula = obj.form.formula.value;
+
+        let BMR = '';
+        if(formula == 0) // Mifflin
+        {
+            BMR = Mifflin(gender, age, bodyFat, height, weight);
+        }
+        else if(formula == 1) // Harris
+        {
+            BMR = Harris(gender, age, bodyFat, height, weight);
+        }
+        else if(formula == 2) // Katch
+        {
+            BMR = Katch(bodyFat, weight);
+        }
+
+        let ret = parseFloat(BMR)*parseFloat(activity);
+        if(unit == 'kilojoules')
+        {
+            ret = (ret*4.1868);
+        }
+
+        document.querySelector(".ans_calculate").innerHTML = '<div class="container"><h4 class="text-center form-control my-3 text-danger fs-4">You should consume <span class="text-white">'+Math.ceil(ret)+' '+unit+'/day </span> of calorie to maintain your weight.</h4></div>';
+    }
+
+    function Mifflin(gender, age, bodyFat, height, weight)
+    {
+        let BMR = (10*weight) + (6.25*height) - (5*age) + 5;
+        if(gender == 1) // Female
+        {
+            BMR = (10*weight) + (6.25*height) - (5*age) - 161;
+        }
+
+        return BMR;
+    }
+
+    function Harris(gender, age, bodyFat, height, weight)
+    {
+        let BMR = (13.397*weight) + (4.799*height) - (5.677*age) + 88.362;
+        if(gender == 1) // Female
+        {
+            BMR = (9.247*weight) + (3.098*height) - (4.330*age) + 447.593;
+        }
+
+        return BMR;
+    }
+
+    function Katch(bodyFat, weight)
+    {
+        let BMR = 370 + 21.6*(1 - (bodyFat/100))*weight;
+
+        return BMR;
+    }
+// function addAnnotation() {
+//     var userNote = prompt('Add a note:');
+//     // Store userNote and display it on the body map
+//     // (Actual implementation may involve saving data to a database)
+//     alert('Note added: ' + userNote);
+// }
+//     // Example using vanilla JavaScript
+//     function addAnnotation() {
+//         var userNote = prompt('Add a note:');
         
-        // Store userNote in local storage (you may want to use a database)
-        var storedNotes = localStorage.getItem('userNotes') || '[]';
-        var notesArray = JSON.parse(storedNotes);
-        notesArray.push(userNote);
-        localStorage.setItem('userNotes', JSON.stringify(notesArray));
+//         // Store userNote in local storage (you may want to use a database)
+//         var storedNotes = localStorage.getItem('userNotes') || '[]';
+//         var notesArray = JSON.parse(storedNotes);
+//         notesArray.push(userNote);
+//         localStorage.setItem('userNotes', JSON.stringify(notesArray));
         
-        alert('Note added: ' + userNote);
-    }
-// Function to fetch and display community forum posts
-function fetchCommunityPosts() {
-    fetch('/api/community/posts')  // Replace with your actual API endpoint
-        .then(response => response.json())
-        .then(posts => {
-            displayCommunityPosts(posts);
-        })
-        .catch(error => console.error('Error fetching community posts:', error));
-}
+//         alert('Note added: ' + userNote);
+//     }
+// // Function to fetch and display community forum posts
+// function fetchCommunityPosts() {
+//     fetch('/api/community/posts')  // Replace with your actual API endpoint
+//         .then(response => response.json())
+//         .then(posts => {
+//             displayCommunityPosts(posts);
+//         })
+//         .catch(error => console.error('Error fetching community posts:', error));
+// }
 
-// Function to display posts in the post-container
-function displayCommunityPosts(posts) {
-    var postContainer = document.getElementById('post-container');
-    postContainer.innerHTML = '';  // Clear existing posts
+// // Function to display posts in the post-container
+// function displayCommunityPosts(posts) {
+//     var postContainer = document.getElementById('post-container');
+//     postContainer.innerHTML = '';  // Clear existing posts
 
-    posts.forEach(post => {
-        var postElement = document.createElement('div');
-        postElement.innerHTML = `
-            <h4>${post.author}</h4>
-            <p>${post.content}</p>
-            <button onclick="showReplies(${post.id})">Show Replies</button>
-            <div id="replies-${post.id}"></div>
-            <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
-            <button onclick="submitReply(${post.id})">Reply</button>
-        `;
+//     posts.forEach(post => {
+//         var postElement = document.createElement('div');
+//         postElement.innerHTML = `
+//             <h4>${post.author}</h4>
+//             <p>${post.content}</p>
+//             <button onclick="showReplies(${post.id})">Show Replies</button>
+//             <div id="replies-${post.id}"></div>
+//             <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
+//             <button onclick="submitReply(${post.id})">Reply</button>
+//         `;
 
-        postContainer.appendChild(postElement);
-    });
-}
+//         postContainer.appendChild(postElement);
+//     });
+// }
 
-// Function to fetch and display community forum posts from Local Storage
-function fetchCommunityPosts() {
-    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
-    displayCommunityPosts(storedPosts);
-}
+// // Function to fetch and display community forum posts from Local Storage
+// function fetchCommunityPosts() {
+//     var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+//     displayCommunityPosts(storedPosts);
+// }
 
-// Function to display posts in the post-container
-function displayCommunityPosts(posts) {
-    var postContainer = document.getElementById('post-container');
-    postContainer.innerHTML = '';  // Clear existing posts
+// // Function to display posts in the post-container
+// function displayCommunityPosts(posts) {
+//     var postContainer = document.getElementById('post-container');
+//     postContainer.innerHTML = '';  // Clear existing posts
 
-    posts.forEach(post => {
-        var postElement = document.createElement('div');
-        postElement.innerHTML = `
-            <h4>${post.author}</h4>
-            <p>${post.content}</p>
-            <button onclick="showReplies(${post.id})">Show Replies</button>
-            <div id="replies-${post.id}"></div>
-            <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
-            <button onclick="submitReply(${post.id})">Reply</button>
-        `;
+//     posts.forEach(post => {
+//         var postElement = document.createElement('div');
+//         postElement.innerHTML = `
+//             <h4>${post.author}</h4>
+//             <p>${post.content}</p>
+//             <button onclick="showReplies(${post.id})">Show Replies</button>
+//             <div id="replies-${post.id}"></div>
+//             <textarea id="reply-content-${post.id}" placeholder="Write your reply..."></textarea>
+//             <button onclick="submitReply(${post.id})">Reply</button>
+//         `;
 
-        postContainer.appendChild(postElement);
-    });
-}
+//         postContainer.appendChild(postElement);
+//     });
+// }
 
-// Function to submit a new post
-function submitPost() {
-    var postContent = document.getElementById('post-content').value;
+// // Function to submit a new post
+// function submitPost() {
+//     var postContent = document.getElementById('post-content').value;
 
-    // Generate a unique post ID (this is a simplified method)
-    var postId = new Date().getTime();
+//     // Generate a unique post ID (this is a simplified method)
+//     var postId = new Date().getTime();
 
-    var newPost = {
-        id: postId,
-        author: "User",  // You can replace this with the actual user's name
-        content: postContent,
-        replies: []
-    };
+//     var newPost = {
+//         id: postId,
+//         author: "User",  // You can replace this with the actual user's name
+//         content: postContent,
+//         replies: []
+//     };
 
-    // Retrieve existing posts from Local Storage
-    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+//     // Retrieve existing posts from Local Storage
+//     var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
 
-    // Add the new post
-    storedPosts.push(newPost);
+//     // Add the new post
+//     storedPosts.push(newPost);
 
-    // Save the updated posts back to Local Storage
-    localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
+//     // Save the updated posts back to Local Storage
+//     localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
 
-    // Display the updated posts
-    fetchCommunityPosts();
-}
+//     // Display the updated posts
+//     fetchCommunityPosts();
+// }
 
-// Function to show replies for a post
-function showReplies(postId) {
-    var repliesContainer = document.getElementById(`replies-${postId}`);
-    repliesContainer.innerHTML = '';
+// // Function to show replies for a post
+// function showReplies(postId) {
+//     var repliesContainer = document.getElementById(`replies-${postId}`);
+//     repliesContainer.innerHTML = '';
 
-    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
-    var post = storedPosts.find(p => p.id === postId);
+//     var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+//     var post = storedPosts.find(p => p.id === postId);
 
-    if (post && post.replies.length > 0) {
-        post.replies.forEach(reply => {
-            var replyElement = document.createElement('div');
-            replyElement.innerHTML = `<p>${reply.author}: ${reply.content}</p>`;
-            repliesContainer.appendChild(replyElement);
-        });
-    }
-}
+//     if (post && post.replies.length > 0) {
+//         post.replies.forEach(reply => {
+//             var replyElement = document.createElement('div');
+//             replyElement.innerHTML = `<p>${reply.author}: ${reply.content}</p>`;
+//             repliesContainer.appendChild(replyElement);
+//         });
+//     }
+// }
 
-// Function to submit a reply to a post
-function submitReply(postId) {
-    var replyContent = document.getElementById(`reply-content-${postId}`).value;
+// // Function to submit a reply to a post
+// function submitReply(postId) {
+//     var replyContent = document.getElementById(`reply-content-${postId}`).value;
 
-    var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
-    var post = storedPosts.find(p => p.id === postId);
+//     var storedPosts = JSON.parse(localStorage.getItem('communityPosts')) || [];
+//     var post = storedPosts.find(p => p.id === postId);
 
-    if (post) {
-        var newReply = {
-            author: "User",  // Replace with the actual user's name
-            content: replyContent
-        };
+//     if (post) {
+//         var newReply = {
+//             author: "User",  // Replace with the actual user's name
+//             content: replyContent
+//         };
 
-        // Add the new reply to the post
-        post.replies.push(newReply);
+//         // Add the new reply to the post
+//         post.replies.push(newReply);
 
-        // Save the updated posts back to Local Storage
-        localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
+//         // Save the updated posts back to Local Storage
+//         localStorage.setItem('communityPosts', JSON.stringify(storedPosts));
 
-        // Display the updated replies
-        showReplies(postId);
-    }
-}
+//         // Display the updated replies
+//         showReplies(postId);
+//     }
+// }
 
-// Initial fetch of community posts when the page loads
-fetchCommunityPosts();
+// // Initial fetch of community posts when the page loads
+// fetchCommunityPosts();
