@@ -500,3 +500,28 @@ function calculateBMI() {
             `Over Weight : <span>${bmi}</span>`;
     }
 }
+// Function to open the BMI calculator pop-up
+function openBMICalculator() {
+    var popup = document.getElementById('bmiPopup');
+    popup.style.display = 'block';
+}
+
+// Function to close the BMI calculator pop-up
+function closeBMICalculator() {
+    var popup = document.getElementById('bmiPopup');
+    popup.style.display = 'none';
+}
+
+// Function to calculate BMI
+function calculateBMI() {
+    var height = parseFloat(document.getElementById('height').value);
+    var weight = parseFloat(document.getElementById('weight').value);
+
+    if (isNaN(height) || isNaN(weight)) {
+        document.getElementById('result').innerHTML = 'Please enter valid height and weight.';
+        return;
+    }
+
+    var bmi = (weight / Math.pow(height / 100, 2)).toFixed(2);
+    document.getElementById('result').innerHTML = 'Your BMI is: ' + bmi;
+}
