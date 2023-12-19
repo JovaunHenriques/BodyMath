@@ -273,8 +273,26 @@
             </div>
         </form>
     </div>
-    <footer>
-        <div class="footer-container">
+    <div class="container">
+        <h1>BMI Calculator</h1>
+
+        <!-- Option for providing height 
+        and weight to the user-->
+        <p>Height (in cm)</p>
+
+        <input type="text" id="height" />
+
+        <p>Weight (in kg)</p>
+
+        <input type="text" id="weight" />
+
+        <button id="btn">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+    <div class="footer-container">
+        <footer>
+
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -283,8 +301,9 @@
                         class="fab fa-linkedin"></i></a>
             </div>
             <p>&copy; 2023 BodyMath. All rights reserved.</p>
-        </div>
-    </footer>
+
+        </footer>
+    </div>
     <script src="./scripts.js"></script>
 </body>
 
