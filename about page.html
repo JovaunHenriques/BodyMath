@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,79 +9,150 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>About</title>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
-            <div class="logo-container">
-                <a href="./index.html">
-                    <div class="nav-img" id="nav-img"> <!-- Change id to class here -->
-                        <img src="./logo.jpg" alt="logo">
-                    </div>
-                </a>
-            </div>
-            <a id="homePage" href="./index.html">Home</a>
-            <a id="aboutPage" href="./about page.html">About</a>
-            <a id="contactPage" href="./contactpage.html">Contact</a>
-            <a id="bodyMath" href="./bodyMath.html">BodyMath</a>
-            <a href="#" class="form__link"  onclick="showRegistration()"><i class="fa-solid fa-address-card"></i></a>
-            <divs class="search-Bar">
-                 <form id="search-bar" action="#" class="search-bar">
-                 <input type="text" placeholder="Search...">
-                    <button type="submit"><i class='bx bx-search'></i></button>
-                 </div>
-             </form> 
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav-bar">
+                <div class="logo-container">
+                    <a href="./index.html">
+                        <div class="nav-img" id="nav-img"> <!-- Change id to class here -->
+                            <img src="./logo.jpg" alt="logo">
+                        </div>
+                    </a>
+                </div>
+                <a id="homePage" href="./index.html">Home</a>
+                <a id="aboutPage" href="./about page.html">About</a>
+                <a id="contactPage" href="./contactpage.html">Contact</a>
+                <a id="bodyMath" href="./bodyMath.html">BodyMath</a>
+                <a href="#" class="form__link" onclick="showRegistration()"><i class="fa-solid fa-address-card"></i></a>
+                <divs class="search-Bar">
+                    <form id="search-bar" action="#" class="search-bar">
+                        <input type="text" placeholder="Search...">
+                        <button type="submit"><i class='bx bx-search'></i></button>
+                        </div>
+                    </form>
             </nav>
-            </header>
-            <div class="infoSection">
-    <h1>About us</h1><br>
-    <h3>About Us - Welcome to BodyMath</h3>
-    <p>
-        At BodyMath, we understand that the journey to a healthier you can be a complex equation. That's why we've created a comprehensive platform designed to 
-        help you overcome the struggle of managing and calculating your body weight, food intake, and diet. Whether you're looking to shed a few pounds, gain muscle, or 
-        simply maintain your current weight, we're here to simplify the math and make it easy for you.
-        
-        Our Mission
-        
-        BodyMath was born out of a passion for fitness and a commitment to helping individuals lead healthier lives. We believe that achieving your fitness goals 
-        should be an empowering and personalized experience. That's why we've developed a range of features and services to support you on your fitness journey.
-        
-        Our Features
+        </header>
+        <div class="form-container register-link">
+            <form class="form form--hidden" id="registration">
+                <h2 class="form__title">Sign Up</h2>
+                <div class="form__message form__message--error"></div>
+                <div class="input-box">
 
-        Connect with fitness trackers and smart devices for enhanced fitness tracking.
-        With BodyMath, you'll have the support and tools you need to make your fitness journey a success. We're here to help you solve the equation 
-        and reach your health and fitness goals. Join us today and start your path to a healthier, happier you!</p>
-<br>
-        <h2>Mission Statement</h2>
+                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username..."
+                        required>
+                    <span id="usernameError" class="error-message"></span><br>
+                </div>
+                <div class="input-box">
 
-        <p>Embarking on a fitness journey requires dedication and effort, and we understand that the intricacies of tracking macros and calories can often feel like an additional burden. The tedious task of 
-            manually calculating these nutritional components might be draining, especially when you're striving to achieve your fitness goals. Whether you're a seasoned fitness enthusiast or a newcomer
-             to the world of wellness, BodyMath aims to revolutionize and streamline this process for you.
+                    <input type="email" class="form__input" autofocus placeholder="Email address..." required>
+                    <span id="emailError" class="error-message"></span><br>
+                </div>
+                <div class="input-box">
 
-            Gone are the days of meticulously crunching numbers and deciphering nutrition labels; BodyMath is your comprehensive solution. This innovative tool has been designed with your convenience in mind, 
-            providing a user-friendly platform that takes the guesswork out of managing your nutritional intake. By seamlessly integrating technology into your fitness routine, BodyMath allows you to focus 
-            more on your workouts and less on the nitty-gritty details of nutrition.
-            
-            For the seasoned pro, BodyMath acts as a sophisticated companion, offering advanced features for personalized tracking and analysis. It adapts to your evolving fitness regimen, providing
-             insights and recommendations to optimize your performance and results. On the other hand, for those just embarking on their fitness journey, BodyMath serves as an accessible guide,
-              breaking down complex nutritional information into simple, actionable steps.
-            
-            Imagine having a virtual nutrition coach at your fingertips, ready to assist you in achieving your fitness aspirations. BodyMath not only calculates your macros and calories but also 
-            provides educational resources, helping you understand the nutritional foundations essential for your success. It's not just a tool; it's a partner in your fitness journey, empowering 
-            you to make informed choices about your diet and propel yourself towards your desired health and wellness outcomes.
-            
-            In a world where time is of the essence, BodyMath is your time-saving ally, ensuring that the path to a healthier lifestyle is paved with efficiency and ease. Say goodbye to the 
-            hassle of manual calculations, and let BodyMath be the catalyst that transforms your fitness experience into a seamless, enjoyable, and rewarding journey. Your goals are within reach, 
-            and BodyMath is here to simplify the way you approach and achieve them.</p>
-    </div>
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/"><i class="fab fa-linkedin"></i></a>
+                    <input type="password" class="form__input" autofocus placeholder="Enter your password..." required>
+                    <span id="passwordError" class="error-message"></span><br>
+                </div>
+                <div class="input-box">
+
+                    <input type="password" class="form__input" autofocus placeholder="Confirm password..." required>
+                    <span id="confirmPasswordError" class="error-message"></span><br>
+                </div>
+                <button type="submit" class="btn" onclick="validateForm()" id="login-button">Sign Up</button>
+                <div class="register-link">
+                    <p>Already have an account? <a class="form__link" onclick="toggleForms()">Log In</a></p>
+                </div>
+            </form>
         </div>
-        <p>&copy; 2023 Your Company. All rights reserved.</p>
-    </footer>
-    <script src="./scripts.js"></script>
+        <!-- Registration Modal -->
+        <div id="combinedFormModal" class="my-modal form--hidden">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username/E-mail" placeholder="username/E-mail" required><br>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+
+                    <button id="closeModal" onclick="toggleForms()">Close</button>
+                </form>
+
+                <div id="message"></div>
+            </div>
+        </div>
+        <div class="infoSection">
+            <h1>About us</h1><br>
+            <h3>About Us - Welcome to BodyMath</h3>
+            <p>
+                At BodyMath, we understand that the journey to a healthier you can be a complex equation. That's why
+                we've created a comprehensive platform designed to
+                help you overcome the struggle of managing and calculating your body weight, food intake, and diet.
+                Whether you're looking to shed a few pounds, gain muscle, or
+                simply maintain your current weight, we're here to simplify the math and make it easy for you.
+
+                Our Mission
+
+                BodyMath was born out of a passion for fitness and a commitment to helping individuals lead healthier
+                lives. We believe that achieving your fitness goals
+                should be an empowering and personalized experience. That's why we've developed a range of features and
+                services to support you on your fitness journey.
+
+                Our Features
+
+                Connect with fitness trackers and smart devices for enhanced fitness tracking.
+                With BodyMath, you'll have the support and tools you need to make your fitness journey a success. We're
+                here to help you solve the equation
+                and reach your health and fitness goals. Join us today and start your path to a healthier, happier you!
+            </p>
+            <br>
+            <h2>Mission Statement</h2>
+
+            <p>Embarking on a fitness journey requires dedication and effort, and we understand that the intricacies of
+                tracking macros and calories can often feel like an additional burden. The tedious task of
+                manually calculating these nutritional components might be draining, especially when you're striving to
+                achieve your fitness goals. Whether you're a seasoned fitness enthusiast or a newcomer
+                to the world of wellness, BodyMath aims to revolutionize and streamline this process for you.
+
+                Gone are the days of meticulously crunching numbers and deciphering nutrition labels; BodyMath is your
+                comprehensive solution. This innovative tool has been designed with your convenience in mind,
+                providing a user-friendly platform that takes the guesswork out of managing your nutritional intake. By
+                seamlessly integrating technology into your fitness routine, BodyMath allows you to focus
+                more on your workouts and less on the nitty-gritty details of nutrition.
+
+                For the seasoned pro, BodyMath acts as a sophisticated companion, offering advanced features for
+                personalized tracking and analysis. It adapts to your evolving fitness regimen, providing
+                insights and recommendations to optimize your performance and results. On the other hand, for those just
+                embarking on their fitness journey, BodyMath serves as an accessible guide,
+                breaking down complex nutritional information into simple, actionable steps.
+
+                Imagine having a virtual nutrition coach at your fingertips, ready to assist you in achieving your
+                fitness aspirations. BodyMath not only calculates your macros and calories but also
+                provides educational resources, helping you understand the nutritional foundations essential for your
+                success. It's not just a tool; it's a partner in your fitness journey, empowering
+                you to make informed choices about your diet and propel yourself towards your desired health and
+                wellness outcomes.
+
+                In a world where time is of the essence, BodyMath is your time-saving ally, ensuring that the path to a
+                healthier lifestyle is paved with efficiency and ease. Say goodbye to the
+                hassle of manual calculations, and let BodyMath be the catalyst that transforms your fitness experience
+                into a seamless, enjoyable, and rewarding journey. Your goals are within reach,
+                and BodyMath is here to simplify the way you approach and achieve them.</p>
+        </div>
+        <footer>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a id="linkedin-Link" href="https://www.linkedin.com/in/jovaun-henriques-37b61b195/"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+        </footer>
+        <script src="./scripts.js"></script>
 </body>
+
 </html>

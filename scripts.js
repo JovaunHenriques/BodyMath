@@ -227,7 +227,7 @@ function scaleMap(image, map) {
             tooltipElement.style.display = 'none';
         });
     });
-
+    //calculator function
     function calculateCalorie(obj)
     {
         const age = obj.form.age.value;
