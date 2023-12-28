@@ -412,37 +412,15 @@ footer {
     cursor: pointer;
 }
 
-.body-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    padding: auto;
-    margin: auto;
-    max-width: 100%;
-    max-height: auto;
+.body-wapper {
+    display: grid;
+    grid-auto-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
 }
 
-#neck {
-    width: 20%;
-    height: auto;
-    top: 50px;
-    /* Adjust the top value as needed */
-}
-
-#thigh {
-    width: 14%;
-    height: auto;
-    top: 11px;
-    /* Adjust the top value as needed, added 'px' */
-}
-
-#anterior {
-    top: 20px;
-    /* Adjust the top value as needed, added 'px' */
-    right: 600px;
-    width: 18%;
-    height: auto;
+.body-wapper *{
+     height: 100%;
 }
 
 /* Style for the pop-up */
@@ -463,7 +441,6 @@ footer {
     cursor: pointer;
     left: 0px;
     top: 0px;
-    width: 1000px;
     height: auto;
 }
 
