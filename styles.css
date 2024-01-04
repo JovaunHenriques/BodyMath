@@ -1,8 +1,8 @@
-html{
+/* html{
     height: 100%;
     margin: 0;
     padding: 0;
-}
+} */
 /* Reset some default styles and apply some basic styling */
 body {
     margin: 0;
@@ -354,8 +354,8 @@ footer {
     color: #fff;
     padding: 0px 0;
     text-align: center;
-    position: absolute;
-    bottom: 0px;
+    position: fixed;
+    bottom: -18px;
     width: 100%;
 }
 
@@ -464,7 +464,7 @@ footer {
 }
 #chatBtn{
     position: absolute;
-    bottom: 120px;
+    bottom: 150px;
     right: 20px;
 }
 
